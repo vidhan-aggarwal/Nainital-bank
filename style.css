@@ -30,6 +30,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .sr-only {
@@ -52,7 +54,6 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 a:hover {
@@ -65,9 +66,11 @@ img {
   display: block;
 }
 
-/* Global smooth transitions */
-* {
-  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+/* Transitions only on interactive elements and hover states */
+button,
+a,
+input {
+  transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 /* Consistent icon sizing & color */
@@ -85,14 +88,25 @@ img {
   padding: 12px 8px 8px;
 }
 
-/* Hover effects */
+/* Hover effects - use will-change sparingly for mobile performance */
 .business-card,
 .announcement-card,
 .stats-card,
 .offer-card,
 .quick-action-item,
 .widget-btn {
-  transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease, border-color 0.28s ease;
+  /* Transitions only applied on hover for better mobile performance */
+}
+
+@media (hover: hover) {
+  .business-card,
+  .announcement-card,
+  .stats-card,
+  .offer-card,
+  .quick-action-item,
+  .widget-btn {
+    transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease, border-color 0.28s ease;
+  }
 }
 
 .business-card:hover,
@@ -339,13 +353,17 @@ img {
   padding: 10px 18px;
   border-radius: 8px;
   white-space: nowrap;
-  transition: background 0.2s, color 0.2s;
 }
 
-.btn-demat:hover {
-  background: var(--primary);
-  color: white;
-  opacity: 1;
+@media (hover: hover) {
+  .btn-demat {
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-demat:hover {
+    background: var(--primary);
+    color: white;
+    opacity: 1;
+  }
 }
 
 .btn-login {
@@ -358,12 +376,16 @@ img {
   font-weight: 600;
   padding: 10px 22px;
   border-radius: 8px;
-  transition: background 0.2s;
 }
 
-.btn-login:hover {
-  background: var(--secondary);
-  opacity: 1;
+@media (hover: hover) {
+  .btn-login {
+    transition: background 0.2s;
+  }
+  .btn-login:hover {
+    background: var(--secondary);
+    opacity: 1;
+  }
 }
 
 /* Hero Section */
@@ -423,8 +445,13 @@ img {
   background-color: #f3f4f6;
   border-radius: var(--radius-lg);
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
   will-change: opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-slide {
+    transition: opacity 0.6s ease-in-out;
+  }
 }
 
 .hero-slide.active {
@@ -538,11 +565,15 @@ img {
   align-items: center;
   justify-content: center;
   z-index: 2;
-  transition: background 0.2s;
 }
 
-.carousel-arrow:hover {
-  background: rgba(0, 0, 0, 0.5);
+@media (hover: hover) {
+  .carousel-arrow {
+    transition: background 0.2s;
+  }
+  .carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 .carousel-prev {
@@ -619,13 +650,17 @@ img {
   font-weight: 600;
   color: var(--primary);
   background: var(--white);
-  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.widget-btn:hover {
-  border-color: var(--primary);
-  box-shadow: var(--shadow-soft);
-  opacity: 1;
+@media (hover: hover) {
+  .widget-btn {
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .widget-btn:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-soft);
+    opacity: 1;
+  }
 }
 
 .widget-icon.gold {
@@ -652,6 +687,7 @@ img {
   border-radius: var(--radius-sm);
   padding: 12px;
   background: #f8fafc;
+  contain: layout style;
 }
 
 .offer-title {
@@ -808,15 +844,18 @@ img {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.2s;
 }
 
-.quick-action-item:hover .quick-icon {
-  background: #c5e3ff;
-}
-
-.quick-action-item:hover {
-  opacity: 1;
+@media (hover: hover) {
+  .quick-icon {
+    transition: background 0.2s;
+  }
+  .quick-action-item:hover .quick-icon {
+    background: #c5e3ff;
+  }
+  .quick-action-item:hover {
+    opacity: 1;
+  }
 }
 
 /* Announcement */
@@ -861,9 +900,14 @@ img {
 .ticker-content {
   display: flex;
   gap: 48px;
-  animation: ticker 30s linear infinite;
   white-space: nowrap;
   padding-left: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ticker-content {
+    animation: ticker 30s linear infinite;
+  }
 }
 
 .ticker-item {
@@ -903,11 +947,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s;
 }
 
-.ticker-btn:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .ticker-btn {
+    transition: transform 0.2s;
+  }
+  .ticker-btn:hover {
+    transform: scale(1.05);
+  }
 }
 
 /* Business Section */
@@ -1039,12 +1087,16 @@ img {
   color: #9CA3AF;
   cursor: pointer;
   flex-shrink: 0;
-  transition: box-shadow 0.2s, color 0.2s;
 }
 
-.carousel-nav-btn:hover {
-  color: var(--primary);
-  box-shadow: var(--shadow-card);
+@media (hover: hover) {
+  .carousel-nav-btn {
+    transition: box-shadow 0.2s, color 0.2s;
+  }
+  .carousel-nav-btn:hover {
+    color: var(--primary);
+    box-shadow: var(--shadow-card);
+  }
 }
 
 .business-cards {
@@ -1059,12 +1111,17 @@ img {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  transition: transform 0.2s, box-shadow 0.2s;
+  contain: content;
 }
 
-.business-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(15, 43, 103, 0.16);
+@media (hover: hover) {
+  .business-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .business-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(15, 43, 103, 0.16);
+  }
 }
 
 .card-image {
@@ -1160,11 +1217,16 @@ img {
   padding: 32px 48px;
   text-align: center;
   min-width: 220px;
-  transition: transform 0.2s;
+  contain: content;
 }
 
-.stats-card:hover {
-  transform: translateY(-4px);
+@media (hover: hover) {
+  .stats-card {
+    transition: transform 0.2s;
+  }
+  .stats-card:hover {
+    transform: translateY(-4px);
+  }
 }
 
 .stats-icon {
@@ -1263,12 +1325,16 @@ img {
   font-weight: 600;
   padding: 8px 24px;
   border-radius: 30px;
-  transition: background 0.2s;
 }
 
-.btn-read-more:hover {
-  background: var(--secondary);
-  opacity: 1;
+@media (hover: hover) {
+  .btn-read-more {
+    transition: background 0.2s;
+  }
+  .btn-read-more:hover {
+    background: var(--secondary);
+    opacity: 1;
+  }
 }
 
 .btn-view-all {
@@ -1279,13 +1345,17 @@ img {
   font-weight: 600;
   padding: 14px 36px;
   border-radius: 30px;
-  transition: background 0.2s, transform 0.2s;
 }
 
-.btn-view-all:hover {
-  background: var(--secondary);
-  transform: translateY(-2px);
-  opacity: 1;
+@media (hover: hover) {
+  .btn-view-all {
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-view-all:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
 }
 
 /* Why Choose */
@@ -1355,13 +1425,17 @@ img {
   font-weight: 600;
   padding: 14px 36px;
   border-radius: 30px;
-  transition: background 0.2s, transform 0.2s;
 }
 
-.btn-get-started:hover {
-  background: var(--secondary);
-  transform: translateY(-2px);
-  opacity: 1;
+@media (hover: hover) {
+  .btn-get-started {
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-get-started:hover {
+    background: var(--secondary);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
 }
 
 /* Announcements */
@@ -1413,13 +1487,18 @@ img {
   border-radius: var(--radius-md);
   padding: 24px;
   box-shadow: var(--shadow-soft);
-  transition: box-shadow 0.2s, transform 0.2s;
+  contain: content;
 }
 
-.announcement-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(15, 43, 103, 0.14);
-  border-color: rgba(28, 196, 255, 0.25);
+@media (hover: hover) {
+  .announcement-card {
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .announcement-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(15, 43, 103, 0.14);
+    border-color: rgba(28, 196, 255, 0.25);
+  }
 }
 
 .ann-meta {
@@ -1576,7 +1655,6 @@ img {
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 600;
-  transition: background 0.2s;
 }
 
 .store-btn small {
@@ -1586,9 +1664,14 @@ img {
   opacity: 0.8;
 }
 
-.store-btn:hover {
-  background: #1a1a1a;
-  opacity: 1;
+@media (hover: hover) {
+  .store-btn {
+    transition: background 0.2s;
+  }
+  .store-btn:hover {
+    background: #1a1a1a;
+    opacity: 1;
+  }
 }
 
 /* Footer */
@@ -1632,12 +1715,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
 }
 
-.social-icons a:hover {
-  background: var(--primary);
-  opacity: 1;
+@media (hover: hover) {
+  .social-icons a {
+    transition: background 0.2s;
+  }
+  .social-icons a:hover {
+    background: var(--primary);
+    opacity: 1;
+  }
 }
 
 .footer-links {
@@ -1651,12 +1738,16 @@ img {
 .footer-links a {
   font-size: 13px;
   color: rgba(255,255,255,0.65);
-  transition: color 0.2s;
 }
 
-.footer-links a:hover {
-  color: var(--accent);
-  opacity: 1;
+@media (hover: hover) {
+  .footer-links a {
+    transition: color 0.2s;
+  }
+  .footer-links a:hover {
+    color: var(--accent);
+    opacity: 1;
+  }
 }
 
 .contact-item {
@@ -1708,12 +1799,16 @@ img {
 .footer-legal a {
   color: rgba(255,255,255,0.5);
   font-size: 12px;
-  transition: color 0.2s;
 }
 
-.footer-legal a:hover {
-  color: var(--accent);
-  opacity: 1;
+@media (hover: hover) {
+  .footer-legal a {
+    transition: color 0.2s;
+  }
+  .footer-legal a:hover {
+    color: var(--accent);
+    opacity: 1;
+  }
 }
 
 /* Follow Sidebar */
@@ -1752,12 +1847,16 @@ img {
   align-items: center;
   justify-content: center;
   background: var(--primary);
-  transition: transform 0.2s;
 }
 
-.follow-icon:hover {
-  transform: scale(1.08);
-  opacity: 1;
+@media (hover: hover) {
+  .follow-icon {
+    transition: transform 0.2s;
+  }
+  .follow-icon:hover {
+    transform: scale(1.08);
+    opacity: 1;
+  }
 }
 
 .follow-icon.yt {
@@ -1785,13 +1884,17 @@ img {
   justify-content: center;
   z-index: 900;
   box-shadow: 0 4px 16px rgba(28, 196, 255, 0.4);
-  transition: transform 0.2s, background 0.2s;
 }
 
-.back-to-top:hover {
-  transform: translateY(-3px);
-  background: #17b0e8;
-  opacity: 1;
+@media (hover: hover) {
+  .back-to-top {
+    transition: transform 0.2s, background 0.2s;
+  }
+  .back-to-top:hover {
+    transform: translateY(-3px);
+    background: #17b0e8;
+    opacity: 1;
+  }
 }
 
 /* Responsive */
