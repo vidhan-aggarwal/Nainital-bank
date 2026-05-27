@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="header-top">
       <div class="container header-top-inner">
-        <a href="#" class="skip-link">Skip to main content</a>
+        <a href="#main-content" class="skip-link">Skip to main content</a> <!-- WCAG 2.2: Fixed skip link href to point to main content -->
         <nav class="header-top-nav" aria-label="Utility navigation">
           <a href="#">Careers</a>
           <a href="#">Employee Corner</a>
@@ -82,7 +82,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content"> <!-- WCAG 2.2: Added id for skip link target -->
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
@@ -217,7 +217,8 @@
                 </div>
                 <div class="widget-search">
                   <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#9CA3AF" stroke-width="1.5"/><path d="M20 20l-4-4" stroke="#9CA3AF" stroke-width="1.5"/></svg>
-                  <input type="text" placeholder="Check account details..." aria-label="Check account details">
+                  <label for="account-search" class="sr-only">Search account details</label> <!-- WCAG 2.2: Added visually hidden label for search input -->
+                  <input id="account-search" type="text" placeholder="Check account details..." aria-label="Check account details"> <!-- WCAG 2.2: Linked label to input with id -->
                   <span class="search-divider"></span>
                   <button type="button" class="mic-btn" aria-label="Voice search">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="11" rx="3" stroke="#9CA3AF" stroke-width="1.5"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3" stroke="#9CA3AF" stroke-width="1.5"/></svg>
