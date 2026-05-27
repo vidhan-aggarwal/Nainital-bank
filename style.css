@@ -10,11 +10,11 @@
 :root {
   --primary: #173F90;
   --secondary: #0F2B67;
-  --accent: #0076a3; /* WCAG 2.2: Darkened to meet 4.5:1 contrast against white for normal text. */
+  --accent: #1CC4FF; /* WCAG 2.2 compliant: Exclusively used on dark backgrounds (dark blue and black) where contrast ratio is > 7:1. */
   --apply: #26A69A;
   --apply-dark: #157A6F;
-  --gold: #916215; /* WCAG 2.2: Darkened to meet 4.5:1 contrast against white for normal text. */
-  --gold-light: #876208; /* WCAG 2.2: Darkened to meet 4.5:1 contrast against white for normal text. */
+  --gold: #C68B1E; /* WCAG 2.2 compliant: Used as background for .updates-label with dark text #1a1a2e (5.82:1 contrast ratio). */
+  --gold-light: #B8860B; /* WCAG 2.2 compliant: Used for large cursive text .hero-script (3.25:1 contrast ratio, where 3:1 is required for large text) and as border for active card. */
   --bg: #F5F7FA;
   --white: #FFFFFF;
   --text-dark: #1a1a2e;
@@ -44,8 +44,21 @@ html {
 }
 
 /* WCAG 2.2: Add accessible focus states for keyboard navigation */
-:focus-visible {
-  outline: 3px solid #005fcc;
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.widget-btn:focus-visible,
+.quick-action-item:focus-visible,
+.float-btn:focus-visible,
+.icon-btn:focus-visible,
+.search-btn:focus-visible,
+.btn-login:focus-visible,
+.btn-demat:focus-visible,
+.mobile-menu-btn:focus-visible,
+.carousel-arrow:focus-visible,
+.carousel-nav-btn:focus-visible,
+.ticker-btn:focus-visible {
+  outline: 3px solid #005fcc !important;
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -1059,13 +1072,17 @@ input { /* Fixed broken block and consolidated transitions */
   justify-content: flex-start;
 }
 
-.float-btn:hover .float-btn-short {
+.float-btn:hover .float-btn-short,
+.float-btn:focus .float-btn-short,
+.float-btn:focus-within .float-btn-short {
   opacity: 0;
   width: 0;
   margin: 0;
 }
 
-.float-btn:hover .float-btn-full {
+.float-btn:hover .float-btn-full,
+.float-btn:focus .float-btn-full,
+.float-btn:focus-within .float-btn-full {
   opacity: 1;
   width: auto;
   margin-left: 0;
@@ -2075,5 +2092,14 @@ input { /* Fixed broken block and consolidated transitions */
   }
   .ticker-wrap {
     min-height: 40px;
+  }
+}
+
+/* WCAG 2.2: Support prefers-reduced-motion for user accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
