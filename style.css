@@ -35,10 +35,10 @@ html {
 }
 
 .sr-only {
-  position: absolute;
+  position: absolute !important;
   height: 1px; width: 1px;
   overflow: hidden;
-  clip-path: inset(50%); /* Replaced deprecated clip with clip-path */
+  clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
   border: 0; padding: 0; margin: -1px;
 }
@@ -69,7 +69,7 @@ img {
 /* Transitions only on interactive elements and hover states */
 button,
 a,
-input { /* Fixed broken block and consolidated transitions */
+input {
   transition: opacity 0.2s ease, color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
@@ -81,6 +81,21 @@ input { /* Fixed broken block and consolidated transitions */
 .widget-icon svg {
   width: 18px;
   height: 18px;
+}
+
+/* Reduce spacing under hero quick-actions */
+.quick-actions {
+  padding: 12px 8px 8px;
+}
+
+/* Hover effects - use will-change sparingly for mobile performance */
+.business-card,
+.announcement-card,
+.stats-card,
+.offer-card,
+.quick-action-item,
+.widget-btn {
+  /* Transitions only applied on hover for better mobile performance */
 }
 
 @media (hover: hover) {
@@ -108,25 +123,26 @@ input { /* Fixed broken block and consolidated transitions */
 }
 
 .announcement-card:hover {
-  border-color: rgba(28,196,255,0.25); /* Removed duplicate property and fixed spacing */
+  border-color: rgba(28, 196, 255, 0.25);
 }
 
 .stats-card:hover {
-  background: rgba(255,255,255,0.18); /* Removed duplicate property and fixed spacing */
+  background: rgba(255, 255, 255, 0.18);
 }
 
 .offer-card:hover {
-  border-color: rgba(28,196,255,0.3);
+  border-color: rgba(28, 196, 255, 0.3);
 }
 
 .widget-btn:hover {
   transform: translateY(-3px);
 }
 
-@media (max-width: 1400px) {
-  .business-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* Stats number style */
+.stats-number {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--white);
 }
 
 /* Mobile responsive tweaks */
@@ -137,9 +153,6 @@ input { /* Fixed broken block and consolidated transitions */
   .hero-slide { border-radius: 12px; }
   .offer-cards-img { width: 160px; }
   .business-title { font-size: 22px; }
-  .quick-actions { /* Override padding for smaller screens */
-    padding: 12px 8px 8px; /* Moved from global scope to here */
-  }
   .widget-title { font-size: 15px; }
   .hero-script { font-size: 34px; }
 }
@@ -147,9 +160,7 @@ input { /* Fixed broken block and consolidated transitions */
 @media (max-width: 480px) {
   .container { padding: 0 12px; }
   .hero-carousel { min-height: 200px; }
-  .stats-number {
-    font-size: 28px; /* Consolidated duplicate selectors */
-  }
+  .stats-number { font-size: 28px; }
   .main-nav-list { display: none; }
   .header-main-inner { padding: 8px 12px; }
   .logo-title { font-size: 18px; }
@@ -435,7 +446,6 @@ input { /* Fixed broken block and consolidated transitions */
   border-radius: var(--radius-lg);
   opacity: 0;
   will-change: opacity;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -447,6 +457,13 @@ input { /* Fixed broken block and consolidated transitions */
 .hero-slide.active {
   opacity: 1;
   z-index: 1;
+}
+
+/* Ensure inactive slides don't capture pointer events */
+.hero-slide {
+  pointer-events: none;
+}
+.hero-slide.active {
   pointer-events: auto;
 }
 
@@ -802,8 +819,8 @@ input { /* Fixed broken block and consolidated transitions */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px; 
-  padding: 20px 8px 8px; 
+  gap: 20px;
+  padding: 20px 8px 8px;
   border-top: 1px solid #f0f2f5;
   margin-top: 16px;
 }
@@ -870,9 +887,7 @@ input { /* Fixed broken block and consolidated transitions */
 }
 
 /* ensure svg inside updates-label inherits text color (so icon contrast matches text) */
-.announcement-bar .updates-label svg {
-  fill: currentColor; 
-}
+.updates-label svg { fill: currentColor !important; }
 
 .ticker-wrap {
   flex: 1;
@@ -1175,10 +1190,7 @@ input { /* Fixed broken block and consolidated transitions */
 .stats-bg {
   position: absolute;
   inset: 0;
-  background-image: url('images/stats-bg.png'); /* Split shorthand to avoid unrecognized token center/cover */
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url('images/stats-bg.png') center/cover no-repeat;
 }
 
 .stats-bg::after {
@@ -1221,7 +1233,7 @@ input { /* Fixed broken block and consolidated transitions */
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(28,196,255,0.25);
+  background: rgba(28, 196, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1485,7 +1497,7 @@ input { /* Fixed broken block and consolidated transitions */
   .announcement-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 40px rgba(15, 43, 103, 0.14);
-    border-color: rgba(28,196,255,0.25);
+    border-color: rgba(28, 196, 255, 0.25);
   }
 }
 
@@ -1896,7 +1908,7 @@ input { /* Fixed broken block and consolidated transitions */
   }
 }
 
-@media (max-width: 1200px) { /* Merged content of duplicate media queries */
+@media (max-width: 1200px) {
   .hero-grid {
     grid-template-columns: 1fr;
   }
@@ -1961,7 +1973,9 @@ input { /* Fixed broken block and consolidated transitions */
 }
 
 @media (max-width: 768px) {
-  .container { padding: 0 16px; }
+  .container {
+    padding: 0 16px;
+  }
   .header-actions .btn-demat {
     display: none;
   }
