@@ -4,12 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nainital Bank - A Legacy of Trust</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="preload" as="image" href="images/logo.png" type="image/png">
-  <link rel="preload" as="image" href="images/banner-image-1020.jpg" type="image/jpeg">
+  <link rel="preload" as="image" href="images/logo.png" type="image/png" fetchpriority="high">
+  <link
+    rel="preload"
+    as="image"
+    href="images/banner-image-600.jpg"
+    imagesrcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w"
+    imagesizes="(max-width: 600px) 100vw, 1020px"
+    type="image/jpeg"
+    fetchpriority="high"
+  >
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -47,7 +51,7 @@
     <div class="header-main">
       <div class="container header-main-inner">
         <a href="#" class="logo-block">
-          <img src="images/logo.png" alt="Nainital Bank" class="logo-img">
+          <img src="images/logo.png" width="76" height="75" alt="Nainital Bank" class="logo-img" fetchpriority="high">
           <div class="logo-text">
             <h1 class="logo-title" id="site-title">Nainital Bank</h1>
             <p class="logo-subtitle">Estb 1922 | A Legacy of Trust</p>
@@ -93,17 +97,31 @@
                 <div class="hero-slides">
                   <img
                     src="images/banner-image-1020.jpg"
-                    srcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w, images/banner-image.png 1020w"
+                    srcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w"
                     sizes="(max-width: 600px) 100vw, 1020px"
+                    width="1020"
+                    height="380"
                     alt="Suhana Safar - Family with car"
-                    class="hero-slide"
+                    class="hero-slide active"
                     loading="eager"
                     decoding="async"
+                    fetchpriority="high"
                   >
-                  <img src="images/hero2.png" alt="Hero 2" class="hero-slide" loading="lazy" decoding="async">
                   <img
-                    src="images/hero3-1280.jpg"
-                    srcset="images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w, images/hero3.png 2048w"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    data-src="images/hero2.png"
+                    width="441"
+                    height="114"
+                    alt="Hero 2"
+                    class="hero-slide"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                  <img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    data-src="images/hero3-1280.jpg"
+                    data-srcset="images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w"
+                    data-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     width="1020"
                     height="380"
@@ -115,8 +133,10 @@
                   <img
                     width="1020"
                     height="380"
-                    src="images/hero4-1280.jpg"
-                    srcset="images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w, images/hero4.png 2048w"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    data-src="images/hero4-1280.jpg"
+                    data-srcset="images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w"
+                    data-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     alt="Hero 4"
                     class="hero-slide"
@@ -124,8 +144,10 @@
                     decoding="async"
                   >
                   <img
-                    src="images/hero5-1280.jpg"
-                    srcset="images/hero5-640.jpg 640w, images/hero5-1280.jpg 1280w, images/hero5.png 4160w"
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                    data-src="images/hero5-1280.jpg"
+                    data-srcset="images/hero5-640.jpg 640w, images/hero5-1280.jpg 1280w"
+                    data-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     width="1020"
                     height="380"
@@ -140,8 +162,6 @@
                     <p class="hero-script">Suhana Safar</p>
                     <p class="hero-tagline">NAYA VAHAN, NAYI MANZIL</p>
                     <p class="hero-tagline">NAINITAL BANK KE SAATH!</p>
-                    width="4160"
-                    height="1300"
                   </div>
                   <div class="hero-rate-box">
                     <p class="emi-label">EMI STARTING FROM</p>
@@ -214,7 +234,7 @@
                         <a href="#">DETAILS</a>
                       </div>
                     </div>
-                    <img src="images/creditcard.png" alt="Credit cards" class="offer-cards-img" loading="lazy" decoding="async">
+                    <img src="images/creditcard.png" width="208" height="141" alt="Credit cards" class="offer-cards-img" loading="lazy" decoding="async">
                   </div>
                 </div>
                 <div class="widget-search">
@@ -315,7 +335,7 @@
           <div class="business-cards">
             <article class="business-card">
                 <div class="card-image">
-                <img src="images/investmentcoin.png" alt="Investment" loading="lazy" decoding="async">
+                <img src="images/investmentcoin.png" width="430" height="324" alt="Investment" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Investment</h3>
               <div class="card-body">
@@ -325,7 +345,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/investmentblock.png" alt="MSME Investment" loading="lazy" decoding="async">
+                <img src="images/investmentblock.png" width="436" height="328" alt="MSME Investment" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Investment</h3>
               <div class="card-body">
@@ -335,7 +355,7 @@
             </article>
             <article class="business-card business-card-active">
               <div class="card-image">
-                <img src="images/savingaccount.png" alt="Savings Accounts" loading="lazy" decoding="async">
+                <img src="images/savingaccount.png" width="464" height="348" alt="Savings Accounts" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Savings Accounts</h3>
               <div class="card-body">
@@ -345,7 +365,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/fixeddeposit.png" alt="Fixed Deposits" loading="lazy" decoding="async">
+                <img src="images/fixeddeposit.png" width="434" height="328" alt="Fixed Deposits" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Fixed Deposits</h3>
               <div class="card-body">
@@ -355,7 +375,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/homeloan.png" alt="Home Loans" loading="lazy" decoding="async">
+                <img src="images/homeloan.png" width="434" height="324" alt="Home Loans" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Home Loans</h3>
               <div class="card-body">
@@ -403,10 +423,10 @@
       <div class="container">
         <h2 class="section-title">Interest Rates</h2>
         <div class="interest-icons">
-          <img src="images/homeloaner.png" alt="Home Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/carloan.png" alt="Car Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/goldloan.png" alt="Gold Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/eduloan.png" alt="Education Loan" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/homeloaner.png" width="224" height="214" alt="Home Loan" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/carloan.png" width="246" height="160" alt="Car Loan" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/goldloan.png" width="212" height="166" alt="Gold Loan" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/eduloan.png" width="174" height="160" alt="Education Loan" class="loan-icon" loading="lazy" decoding="async">
         </div>
         <div class="interest-grid">
           <div class="interest-item">
@@ -531,10 +551,10 @@
     <section class="mobile-app-section">
       <div class="container mobile-app-inner">
         <div class="app-visual">
-          <img src="images/phone.png" alt="Nainital Bank Mobile App" class="phone-img" loading="lazy" decoding="async">
+          <img src="images/phone.png" width="287" height="441" alt="Nainital Bank Mobile App" class="phone-img" loading="lazy" decoding="async">
           <div class="app-badges-side">
             <div class="qr-code">
-              <img src="images/qrcode.png" alt="QR Code" loading="lazy" decoding="async">
+              <img src="images/qrcode.png" width="436" height="208" alt="QR Code" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -644,9 +664,6 @@
         </nav>
       </div>
     </div>
-    <a href="#" class="back-to-top" aria-label="Back to top">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-    </a>
   </footer>
 
   <!-- Fixed Sidebars -->
@@ -685,8 +702,18 @@
       const intervalMs = 4000;
       let timer = null;
 
+      function hydrateSlide(slide) {
+        if (!slide || slide.dataset.loaded === 'true') return;
+        if (slide.dataset.srcset) slide.srcset = slide.dataset.srcset;
+        if (slide.dataset.sizes) slide.sizes = slide.dataset.sizes;
+        if (slide.dataset.src) slide.src = slide.dataset.src;
+        slide.dataset.loaded = 'true';
+      }
+
       function show(index){
         index = (index + slides.length) % slides.length;
+        hydrateSlide(slides[index]);
+        hydrateSlide(slides[(index + 1) % slides.length]);
         slides.forEach((s,i)=> s.classList.toggle('active', i===index));
         dots.forEach((d,i)=> d.classList.toggle('active', i===index));
         current = index;
