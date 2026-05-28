@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nainital Bank — established 1922. Trusted banking for savings, loans, fixed deposits, and digital services across India.">
   <title>Nainital Bank - A Legacy of Trust</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="preload" as="image" href="images/logo.png" type="image/png">
-  <link rel="preload" as="image" href="images/banner-image-1020.jpg" type="image/jpeg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="fonts/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/poppins.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="fonts/poppins.css"></noscript>
+  <link rel="preload" as="image" type="image/jpeg" href="images/banner-image-600.jpg" imagesrcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w" imagesizes="(max-width: 600px) 100vw, 1020px" fetchpriority="high">
+  <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Poppins',system-ui,-apple-system,sans-serif;background:#F5F7FA;color:#1a1a2e;line-height:1.5;overflow-x:hidden}img{max-width:100%;height:auto;display:block}.container{max-width:1638px;margin:0 auto;padding:0 32px}.site-header{position:sticky;top:0;z-index:1000;box-shadow:0 2px 12px rgba(15,43,103,.15)}.header-top{background:#0F2B67;height:40px}.header-main{background:#fff;border-bottom:1px solid #e8ecf2}.hero-section{padding:24px 0 0}.hero-card{background:#fff;border-radius:20px;box-shadow:0 4px 24px rgba(23,63,144,.08);overflow:hidden;padding:20px}.hero-grid{display:grid;grid-template-columns:1.65fr 1fr;gap:20px}.hero-carousel{position:relative;border-radius:20px;overflow:hidden;min-height:380px}.hero-slides{position:relative;width:100%;min-height:380px}.hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#f3f4f6;border-radius:20px;opacity:0}.hero-slide.active{opacity:1;z-index:1}@media(max-width:900px){.container{padding:0 20px}.hero-grid{grid-template-columns:1fr}.hero-carousel,.hero-slides{min-height:260px}}@media(max-width:480px){.container{padding:0 12px}.hero-carousel,.hero-slides{min-height:200px}}</style>
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
   <!-- Header -->
@@ -47,7 +48,7 @@
     <div class="header-main">
       <div class="container header-main-inner">
         <a href="#" class="logo-block">
-          <img src="images/logo.png" alt="Nainital Bank" class="logo-img">
+          <img src="images/logo.png" alt="Nainital Bank" class="logo-img" width="76" height="75">
           <div class="logo-text">
             <div class="logo-title" id="site-title">Nainital Bank</div>
             <p class="logo-subtitle">Estb 1922 | A Legacy of Trust</p>
@@ -92,47 +93,16 @@
               <div class="hero-carousel">
                 <div class="hero-slides">
                   <img
-                    src="images/banner-image-1020.jpg"
+                    src="images/banner-image-600.jpg"
                     srcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w"
                     sizes="(max-width: 600px) 100vw, 1020px"
+                    width="1020"
+                    height="380"
                     alt="Suhana Safar - Family with car"
-                    class="hero-slide"
+                    class="hero-slide active"
                     loading="eager"
-                    decoding="async"
-                  >
-                  <img src="images/hero2.png" alt="Hero 2" class="hero-slide" loading="lazy" decoding="async">
-                  <img
-                    src="images/hero3-1280.jpg"
-                    srcset="images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w, images/hero3.png 2048w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
-                    width="1020"
-                    height="380"
-                    alt="Hero 3"
-                    class="hero-slide"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                  <img
-                    width="1020"
-                    height="380"
-                    src="images/hero4-1280.jpg"
-                    srcset="images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w, images/hero4.png 2048w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
-                    alt="Hero 4"
-                    class="hero-slide"
-                    loading="lazy"
-                    decoding="async"
-                  >
-                  <img
-                    src="images/hero5-1280.jpg"
-                    srcset="images/hero5-640.jpg 640w, images/hero5-1280.jpg 1280w, images/hero5.png 4160w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
-                    width="1020"
-                    height="380"
-                    alt="Hero 5"
-                    class="hero-slide"
-                    loading="lazy"
-                    decoding="async"
+                    fetchpriority="high"
+                    decoding="sync"
                   >
                 </div>
                 <div class="hero-overlay">
@@ -201,10 +171,10 @@
                   <a href="#" class="widget-btn widget-apply">Apply Now</a>
                 </div>
                 <div class="offer-card">
-                  <h3 class="offer-title">Offer for you!</h3>
+                  <p class="offer-title">Offer for you!</p>
                   <div class="offer-inner">
                     <div class="offer-content">
-                      <h4>Credit Card for you!</h4>
+                      <p class="offer-heading">Credit Card for you!</p>
                       <p>Enjoy discounts on BookMyShow, electronics, dining and more!</p>
                       <div class="offer-links">
                         <a href="#">APPLY</a>
@@ -212,7 +182,7 @@
                         <a href="#">DETAILS</a>
                       </div>
                     </div>
-                    <img src="images/creditcard.png" alt="Credit cards" class="offer-cards-img" loading="lazy" decoding="async">
+                    <img src="images/creditcard.png" alt="Credit cards" class="offer-cards-img" width="208" height="141" loading="lazy" decoding="async">
                   </div>
                 </div>
                 <div class="widget-search">
@@ -314,7 +284,7 @@
           <div class="business-cards">
             <article class="business-card">
                 <div class="card-image">
-                <img src="images/investmentcoin.png" alt="Investment" loading="lazy" decoding="async">
+                <img src="images/card-investment.png" alt="Investment" width="430" height="324" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Investment</h3>
               <div class="card-body">
@@ -324,7 +294,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/investmentblock.png" alt="MSME Investment" loading="lazy" decoding="async">
+                <img src="images/card-msme.png" alt="MSME Investment" width="436" height="328" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Investment</h3>
               <div class="card-body">
@@ -334,7 +304,7 @@
             </article>
             <article class="business-card business-card-active">
               <div class="card-image">
-                <img src="images/savingaccount.png" alt="Savings Accounts" loading="lazy" decoding="async">
+                <img src="images/card-savings.png" alt="Savings Accounts" width="464" height="348" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Savings Accounts</h3>
               <div class="card-body">
@@ -344,7 +314,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/fixeddeposit.png" alt="Fixed Deposits" loading="lazy" decoding="async">
+                <img src="images/card-fd.png" alt="Fixed Deposits" width="434" height="328" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Fixed Deposits</h3>
               <div class="card-body">
@@ -354,7 +324,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/homeloan.png" alt="Home Loans" loading="lazy" decoding="async">
+                <img src="images/card-home.png" alt="Home Loans" width="434" height="324" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label">Home Loans</h3>
               <div class="card-body">
@@ -402,10 +372,10 @@
       <div class="container">
         <h2 class="section-title">Interest Rates</h2>
         <div class="interest-icons">
-          <img src="images/homeloaner.png" alt="Home Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/carloan.png" alt="Car Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/goldloan.png" alt="Gold Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/eduloan.png" alt="Education Loan" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/loan-home-icon.png" alt="Home Loan" class="loan-icon" width="224" height="214" loading="lazy" decoding="async">
+          <img src="images/carloan.png" alt="Car Loan" class="loan-icon" width="246" height="160" loading="lazy" decoding="async">
+          <img src="images/goldloan.png" alt="Gold Loan" class="loan-icon" width="212" height="166" loading="lazy" decoding="async">
+          <img src="images/eduloan.png" alt="Education Loan" class="loan-icon" width="174" height="160" loading="lazy" decoding="async">
         </div>
         <div class="interest-grid">
           <div class="interest-item">
@@ -530,10 +500,10 @@
     <section class="mobile-app-section">
       <div class="container mobile-app-inner">
         <div class="app-visual">
-          <img src="images/phone.png" alt="Nainital Bank Mobile App" class="phone-img" loading="lazy" decoding="async">
+          <img src="images/phone-mockup.png" alt="Nainital Bank Mobile App" class="phone-img" width="287" height="441" loading="lazy" decoding="async">
           <div class="app-badges-side">
             <div class="qr-code">
-              <img src="images/qrcode.png" alt="QR Code" loading="lazy" decoding="async">
+              <img src="images/qrcode.png" alt="QR Code" width="436" height="208" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
@@ -668,15 +638,68 @@
   <script>
     (function(){
       const carouselEl = document.querySelector('.hero-carousel');
-      const slides = Array.from(document.querySelectorAll('.hero-slide'));
+      const slidesContainer = document.querySelector('.hero-slides');
       const dots = Array.from(document.querySelectorAll('.carousel-dots .dot'));
       const prevBtn = document.querySelector('.carousel-prev');
       const nextBtn = document.querySelector('.carousel-next');
-      if (!slides.length) return;
+      if (!slidesContainer) return;
 
+      const extraSlides = [
+        { src: 'images/hero2.png', alt: 'Hero 2', width: 441, height: 114 },
+        {
+          src: 'images/hero3-1280.jpg',
+          srcset: 'images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w',
+          sizes: '(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px',
+          alt: 'Hero 3',
+          width: 1020,
+          height: 380
+        },
+        {
+          src: 'images/hero4-1280.jpg',
+          srcset: 'images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w',
+          sizes: '(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px',
+          alt: 'Hero 4',
+          width: 1020,
+          height: 380
+        },
+        {
+          src: 'images/hero5-1280.jpg',
+          srcset: 'images/hero5-640.jpg 640w, images/hero5-1280.jpg 1280w',
+          sizes: '(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px',
+          alt: 'Hero 5',
+          width: 1020,
+          height: 380
+        }
+      ];
+
+      function createSlide(data){
+        const img = document.createElement('img');
+        img.src = data.src;
+        if (data.srcset) img.srcset = data.srcset;
+        if (data.sizes) img.sizes = data.sizes;
+        img.alt = data.alt;
+        img.width = data.width;
+        img.height = data.height;
+        img.className = 'hero-slide';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        return img;
+      }
+
+      function loadExtraSlides(){
+        if (extrasLoaded) return;
+        extrasLoaded = true;
+        extraSlides.forEach((data)=>{
+          slidesContainer.appendChild(createSlide(data));
+        });
+        slides = Array.from(document.querySelectorAll('.hero-slide'));
+      }
+
+      let slides = Array.from(document.querySelectorAll('.hero-slide'));
       let current = 0;
       const intervalMs = 4000;
       let timer = null;
+      let extrasLoaded = false;
 
       function show(index){
         index = (index + slides.length) % slides.length;
@@ -685,8 +708,8 @@
         current = index;
       }
 
-      function next(){ show(current+1); }
-      function prev(){ show(current-1); }
+      function next(){ loadExtraSlides(); show(current+1); }
+      function prev(){ loadExtraSlides(); show(current-1); }
 
       function start(){ stop(); timer = setInterval(next, intervalMs); }
       function stop(){ if (timer) { clearInterval(timer); timer = null; } }
@@ -694,24 +717,24 @@
 
       prevBtn && prevBtn.addEventListener('click', ()=>{ prev(); reset(); });
       nextBtn && nextBtn.addEventListener('click', ()=>{ next(); reset(); });
-      dots.forEach((d, i)=> d.addEventListener('click', ()=>{ show(i); reset(); }));
+      dots.forEach((d, i)=> d.addEventListener('click', ()=>{ loadExtraSlides(); show(i); reset(); }));
 
-      // pause on hover (desktop)
       if (carouselEl) {
         carouselEl.addEventListener('mouseenter', stop);
         carouselEl.addEventListener('mouseleave', start);
       }
 
-      // basic touch swipe support
       let touchStartX = 0;
       let touchEndX = 0;
       const touchThreshold = 40;
       carouselEl && carouselEl.addEventListener('touchstart', (e)=>{ touchStartX = e.changedTouches[0].screenX; stop(); });
       carouselEl && carouselEl.addEventListener('touchend', (e)=>{ touchEndX = e.changedTouches[0].screenX; const dx = touchEndX - touchStartX; if (Math.abs(dx) > touchThreshold) { dx < 0 ? next() : prev(); } reset(); });
 
-      // Initialize autoplay
       show(0);
       start();
+
+      const deferSlides = window.requestIdleCallback || function(cb){ setTimeout(cb, 1200); };
+      deferSlides(loadExtraSlides);
 
       // Animated counters for stats
       const counters = Array.from(document.querySelectorAll('.stats-number[data-target]'));
