@@ -14,7 +14,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="header-top">
       <div class="container header-top-inner">
         <a href="#" class="skip-link">Skip to main content</a>
@@ -82,7 +82,7 @@
     </div>
   </header>
 
-  <main>
+  <main role="main">
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
@@ -93,7 +93,7 @@
                 <div class="hero-slides">
                   <img
                     src="images/banner-image-1020.jpg"
-                    srcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w"
+                    srcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w, images/banner-image.png 1020w"
                     sizes="(max-width: 600px) 100vw, 1020px"
                     alt="Suhana Safar - Family with car"
                     class="hero-slide"
@@ -140,6 +140,8 @@
                     <p class="hero-script">Suhana Safar</p>
                     <p class="hero-tagline">NAYA VAHAN, NAYI MANZIL</p>
                     <p class="hero-tagline">NAINITAL BANK KE SAATH!</p>
+                    width="4160"
+                    height="1300"
                   </div>
                   <div class="hero-rate-box">
                     <p class="emi-label">EMI STARTING FROM</p>
@@ -556,7 +558,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
       <div class="footer-col">
         <h3 class="footer-heading">Nainital Bank</h3>
@@ -642,10 +644,13 @@
         </nav>
       </div>
     </div>
+    <a href="#" class="back-to-top" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </a>
   </footer>
 
   <!-- Fixed Sidebars -->
-  <aside class="follow-sidebar" aria-label="Follow us on social media">
+  <aside class="follow-sidebar" role="complementary" aria-label="Follow us on social media">
     <span class="follow-text">Follow us on</span>
     <a href="#" class="follow-icon fb" aria-label="Facebook">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -664,6 +669,9 @@
     </a>
   </aside>
 
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+  </a>
   <script>
     (function(){
       const carouselEl = document.querySelector('.hero-carousel');
