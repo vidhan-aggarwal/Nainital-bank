@@ -3,43 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nainital Bank — personal and business banking, loans, deposits, and digital services since 1922.">
   <title>Nainital Bank - A Legacy of Trust</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="preload" as="image" href="images/logo.png" type="image/png">
   <link rel="preload" as="image" href="images/banner-image-1020.jpg" type="image/jpeg">
+  <link href="https://cdn.ux4g.gov.in/UX4G@2.0.8/css/ux4g-min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link" data-nb-i18n="skip.main">Skip to main content</a>
+
   <!-- Header -->
-  <header class="site-header">
-    <div class="header-top">
+  <header class="site-header" role="banner">
+    <!-- UX4G accessibility bar -->
+    <div class="ux4g-accessibility-bar header-top" data-nb-i18n-aria="a11y.bar" aria-label="Accessibility and language options">
       <div class="container header-top-inner">
-        <a href="#" class="skip-link">Skip to main content</a>
-        <nav class="header-top-nav" aria-label="Utility navigation">
-          <a href="#">Careers</a>
-          <a href="#">Employee Corner</a>
-          <a href="#">Tender</a>
-          <a href="#">FAQ</a>
-          <a href="#">Contact Us</a>
-          <a href="#" class="apply-now-link">Apply Now</a>
+        <nav class="header-top-nav" data-nb-i18n-aria="nav.utility" aria-label="Utility navigation">
+          <a href="#" data-nb-i18n="util.careers">Careers</a>
+          <a href="#" data-nb-i18n="util.employee">Employee Corner</a>
+          <a href="#" data-nb-i18n="util.tender">Tender</a>
+          <a href="#" data-nb-i18n="util.faq">FAQ</a>
+          <a href="#" data-nb-i18n="util.contact">Contact Us</a>
+          <a href="#" class="apply-now-link" data-nb-i18n="util.apply">Apply Now</a>
         </nav>
-        <div class="header-top-right">
-          <div class="header-icons">
-            <a href="#" class="icon-btn" aria-label="Accessibility">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5"/></svg>
-            </a>
-            <a href="#" class="icon-btn" aria-label="Notifications">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" stroke="currentColor" stroke-width="1.5"/></svg>
-            </a>
-          </div>
-          <div class="language-selector">
-            <a href="#" class="lang-active">Hi</a>
-            <span class="lang-divider">/</span>
-            <a href="#">Eng</a>
-          </div>
+        <div class="header-top-right nb-accessibility-controls">
+          <span class="nb-font-size-controls d-none d-md-inline" data-nb-i18n-aria="a11y.fontsize" aria-label="Text size">
+            <button type="button" id="nb-font-decrease" class="nb-font-btn" data-nb-i18n-aria="a11y.font.decrease" aria-label="Decrease text size">-A</button>
+            <button type="button" id="nb-font-reset" class="nb-font-btn nb-font-btn-active" data-nb-i18n-aria="a11y.font.reset" aria-label="Reset text size">A</button>
+            <button type="button" id="nb-font-increase" class="nb-font-btn" data-nb-i18n-aria="a11y.font.increase" aria-label="Increase text size">A+</button>
+            <span class="nb-partition" aria-hidden="true">|</span>
+          </span>
+          <span class="nb-theme-toggle-wrap" title="Light / dark mode">
+            <input type="checkbox" class="nb-theme-input" id="nb-theme-toggle" data-nb-i18n-aria="a11y.theme" aria-label="Toggle dark mode">
+            <label for="nb-theme-toggle" class="nb-theme-label">
+              <span class="nb-theme-icon" aria-hidden="true">&#9790;</span>
+              <span class="nb-theme-icon" aria-hidden="true">&#9728;</span>
+              <span class="nb-theme-ball"></span>
+            </label>
+          </span>
+          <span class="nb-language-wrap">
+            <label for="nb-language" class="visually-hidden">Select language</label>
+            <select name="language" id="nb-language" class="nb-lang-select">
+              <option value="en" selected>English</option>
+              <option value="hi">हिन्दी</option>
+            </select>
+          </span>
+          <a href="#" class="icon-btn" data-nb-i18n-aria="a11y.notifications" aria-label="Notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -47,42 +62,42 @@
     <div class="header-main">
       <div class="container header-main-inner">
         <a href="#" class="logo-block">
-          <img src="images/logo.png" alt="Nainital Bank" class="logo-img">
+          <img src="images/logo.png" alt="Nainital Bank" data-nb-i18n-alt="logo.alt" class="logo-img">
           <div class="logo-text">
             <h1 class="logo-title" id="site-title">Nainital Bank</h1>
-            <p class="logo-subtitle">Estb 1922 | A Legacy of Trust</p>
+            <p class="logo-subtitle" data-nb-i18n="logo.subtitle">Estb 1922 | A Legacy of Trust</p>
           </div>
         </a>
-        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <button class="mobile-menu-btn" data-nb-i18n-aria="a11y.menu.open" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </button>
 
-        <nav class="main-navbar" id="main-nav" aria-label="Main navigation">
+        <nav class="main-navbar" id="main-nav" data-nb-i18n-aria="nav.main" aria-label="Main navigation">
           <ul class="main-nav-list">
-            <li><a href="#" class="nav-active">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Naini-Deposits</a></li>
-            <li><a href="#">Naini-Loans</a></li>
-            <li><a href="#">Investment &amp; WMS</a></li>
-            <li><a href="#">Demat Account</a></li>
+            <li><a href="#" class="nav-active" aria-current="page" data-nb-i18n="nav.home">Home</a></li>
+            <li><a href="#" data-nb-i18n="nav.about">About Us</a></li>
+            <li><a href="#" data-nb-i18n="nav.deposits">Naini-Deposits</a></li>
+            <li><a href="#" data-nb-i18n="nav.loans">Naini-Loans</a></li>
+            <li><a href="#" data-nb-i18n="nav.investment">Investment &amp; WMS</a></li>
+            <li><a href="#" data-nb-i18n="nav.demat">Demat Account</a></li>
           </ul>
         </nav>
 
         <div class="header-actions">
-          <button type="button" class="search-btn" aria-label="Search">
+          <button type="button" class="search-btn" data-nb-i18n-aria="header.search" aria-label="Search">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </button>
-          <a href="#" class="btn-demat">Demat Account</a>
-          <a href="#" class="btn-login">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"/></svg>
-            Login
+          <a href="#" class="btn btn-outline-primary btn-demat" data-nb-i18n="nav.demat">Demat Account</a>
+          <a href="#" class="btn btn-primary btn-login">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5"/></svg>
+            <span data-nb-i18n="header.login">Login</span>
           </a>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
@@ -96,11 +111,12 @@
                     srcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w"
                     sizes="(max-width: 600px) 100vw, 1020px"
                     alt="Suhana Safar - Family with car"
+                    data-nb-i18n-alt="alt.hero1"
                     class="hero-slide"
                     loading="eager"
                     decoding="async"
                   >
-                  <img src="images/hero2.png" alt="Hero 2" class="hero-slide" loading="lazy" decoding="async">
+                  <img src="images/hero2.png" alt="Hero 2" data-nb-i18n-alt="alt.hero2" class="hero-slide" loading="lazy" decoding="async">
                   <img
                     src="images/hero3-1280.jpg"
                     srcset="images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w, images/hero3.png 2048w"
@@ -108,6 +124,7 @@
                     width="1020"
                     height="380"
                     alt="Hero 3"
+                    data-nb-i18n-alt="alt.hero3"
                     class="hero-slide"
                     loading="lazy"
                     decoding="async"
@@ -119,6 +136,7 @@
                     srcset="images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w, images/hero4.png 2048w"
                     sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     alt="Hero 4"
+                    data-nb-i18n-alt="alt.hero4"
                     class="hero-slide"
                     loading="lazy"
                     decoding="async"
@@ -130,6 +148,7 @@
                     width="1020"
                     height="380"
                     alt="Hero 5"
+                    data-nb-i18n-alt="alt.hero5"
                     class="hero-slide"
                     loading="lazy"
                     decoding="async"
@@ -137,20 +156,18 @@
                 </div>
                 <div class="hero-overlay">
                   <div class="hero-promo-text">
-                    <p class="hero-script">Suhana Safar</p>
-                    <p class="hero-tagline">NAYA VAHAN, NAYI MANZIL</p>
-                    <p class="hero-tagline">NAINITAL BANK KE SAATH!</p>
-                    width="4160"
-                    height="1300"
+                    <p class="hero-script" data-nb-i18n="hero.script">Suhana Safar</p>
+                    <p class="hero-tagline" data-nb-i18n="hero.tagline1">NAYA VAHAN, NAYI MANZIL</p>
+                    <p class="hero-tagline" data-nb-i18n="hero.tagline2">NAINITAL BANK KE SAATH!</p>
                   </div>
                   <div class="hero-rate-box">
-                    <p class="emi-label">EMI STARTING FROM</p>
+                    <p class="emi-label" data-nb-i18n="hero.emi">EMI STARTING FROM</p>
                     <div class="rate-row">
                       <span class="rate-value">7.65</span>
                       <span class="rate-percent">%</span>
                       <div class="rate-meta">
-                        <span class="rate-sub">RATE OF</span>
-                        <span class="rate-sub">INTEREST</span>
+                        <span class="rate-sub" data-nb-i18n="hero.rate.of">RATE OF</span>
+                        <span class="rate-sub" data-nb-i18n="hero.rate.interest">INTEREST</span>
                       </div>
                       <svg class="rate-arrow" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M8 28L20 8L32 28" stroke="#1CC4FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
@@ -160,68 +177,68 @@
                     </div>
                   </div>
                 </div>
-                <button type="button" class="carousel-arrow carousel-prev" aria-label="Previous slide">
+                <button type="button" class="carousel-arrow carousel-prev" data-nb-i18n-aria="carousel.prev" aria-label="Previous slide">
                   <svg width="12" height="12" viewBox="0 0 12 12"><path d="M8 2L4 6l4 4" stroke="white" stroke-width="1.5" fill="none"/></svg>
                 </button>
-                <button type="button" class="carousel-arrow carousel-next" aria-label="Next slide">
+                <button type="button" class="carousel-arrow carousel-next" data-nb-i18n-aria="carousel.next" aria-label="Next slide">
                   <svg width="12" height="12" viewBox="0 0 12 12"><path d="M4 2l4 4-4 4" stroke="white" stroke-width="1.5" fill="none"/></svg>
                 </button>
-                <div class="carousel-dots">
-                  <span class="dot active"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
-                  <span class="dot"></span>
+                <div class="carousel-dots" role="tablist" data-nb-i18n-aria="carousel.slides" aria-label="Hero slides">
+                  <button type="button" class="dot active" role="tab" aria-selected="true" data-nb-i18n-aria="carousel.slide1" aria-label="Slide 1"></button>
+                  <button type="button" class="dot" role="tab" aria-selected="false" data-nb-i18n-aria="carousel.slide2" aria-label="Slide 2"></button>
+                  <button type="button" class="dot" role="tab" aria-selected="false" data-nb-i18n-aria="carousel.slide3" aria-label="Slide 3"></button>
+                  <button type="button" class="dot" role="tab" aria-selected="false" data-nb-i18n-aria="carousel.slide4" aria-label="Slide 4"></button>
+                  <button type="button" class="dot" role="tab" aria-selected="false" data-nb-i18n-aria="carousel.slide5" aria-label="Slide 5"></button>
                 </div>
               </div>
             </div>
 
             <div class="hero-right">
               <div class="banking-widget">
-                <h2 class="widget-title">Banking Built on Trust,<br><span>Powered by Innovation</span></h2>
+                <h2 class="widget-title"><span data-nb-i18n="widget.title.l1">Banking Built on Trust,</span><br><span class="widget-title-line2" data-nb-i18n="widget.title.l2">Powered by Innovation</span></h2>
                 <div class="widget-buttons">
                   <a href="#" class="widget-btn">
                     <span class="widget-icon gold">&#127974;</span>
-                    Accounts
+                    <span data-nb-i18n="widget.accounts">Accounts</span>
                   </a>
                   <a href="#" class="widget-btn">
                     <span class="widget-icon gold">&#128179;</span>
-                    Cards
+                    <span data-nb-i18n="widget.cards">Cards</span>
                   </a>
                   <a href="#" class="widget-btn">
                     <span class="widget-icon gold">&#128176;</span>
-                    Loans
+                    <span data-nb-i18n="widget.loans">Loans</span>
                   </a>
                   <a href="#" class="widget-btn">
                     <span class="widget-icon gold">&#128274;</span>
-                    Deposits
+                    <span data-nb-i18n="widget.deposits">Deposits</span>
                   </a>
                   <a href="#" class="widget-btn">
                     <span class="widget-icon gold">&#128200;</span>
-                    Investment
+                    <span data-nb-i18n="widget.investment">Investment</span>
                   </a>
-                  <a href="#" class="widget-btn widget-apply">Apply Now</a>
+                  <a href="#" class="widget-btn widget-apply" data-nb-i18n="widget.apply">Apply Now</a>
                 </div>
                 <div class="offer-card">
-                  <h3 class="offer-title">Offer for you!</h3>
+                  <h3 class="offer-title" data-nb-i18n="widget.offer.title">Offer for you!</h3>
                   <div class="offer-inner">
                     <div class="offer-content">
-                      <h4>Credit Card for you!</h4>
-                      <p>Enjoy discounts on BookMyShow, electronics, dining and more!</p>
+                      <h4 data-nb-i18n="widget.offer.heading">Credit Card for you!</h4>
+                      <p data-nb-i18n="widget.offer.desc">Enjoy discounts on BookMyShow, electronics, dining and more!</p>
                       <div class="offer-links">
-                        <a href="#">APPLY</a>
+                        <a href="#" data-nb-i18n="widget.offer.apply">APPLY</a>
                         <span>|</span>
-                        <a href="#">DETAILS</a>
+                        <a href="#" data-nb-i18n="widget.offer.details">DETAILS</a>
                       </div>
                     </div>
-                    <img src="images/creditcard.png" alt="Credit cards" class="offer-cards-img" loading="lazy" decoding="async">
+                    <img src="images/creditcard.png" alt="Credit cards" data-nb-i18n-alt="alt.creditcards" class="offer-cards-img" loading="lazy" decoding="async">
                   </div>
                 </div>
                 <div class="widget-search">
                   <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#9CA3AF" stroke-width="1.5"/><path d="M20 20l-4-4" stroke="#9CA3AF" stroke-width="1.5"/></svg>
-                  <input type="text" placeholder="Check account details..." aria-label="Check account details">
+                  <input type="text" placeholder="Check account details..." data-nb-i18n-placeholder="widget.search.placeholder" data-nb-i18n-aria="widget.search.aria" aria-label="Check account details">
                   <span class="search-divider"></span>
-                  <button type="button" class="mic-btn" aria-label="Voice search">
+                  <button type="button" class="mic-btn" data-nb-i18n-aria="widget.voice.aria" aria-label="Voice search">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="11" rx="3" stroke="#9CA3AF" stroke-width="1.5"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3" stroke="#9CA3AF" stroke-width="1.5"/></svg>
                   </button>
                 </div>
@@ -234,25 +251,25 @@
               <span class="quick-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="5" cy="12" r="1.5" fill="#173F90"/><circle cx="12" cy="12" r="1.5" fill="#173F90"/><circle cx="19" cy="12" r="1.5" fill="#173F90"/></svg>
               </span>
-              <span>Track Applications /<br>Service Requests</span>
+              <span data-nb-i18n="quick.track" data-nb-i18n-br>Track Applications /<br>Service Requests</span>
             </a>
             <a href="#" class="quick-action-item">
               <span class="quick-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="6" y="10" width="12" height="10" rx="2" stroke="#173F90" stroke-width="1.5"/><path d="M9 10V8a3 3 0 0 1 6 0v2" stroke="#173F90" stroke-width="1.5"/></svg>
               </span>
-              <span>Smart Lock</span>
+              <span data-nb-i18n="quick.lock">Smart Lock</span>
             </a>
             <a href="#" class="quick-action-item">
               <span class="quick-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="6" width="16" height="12" rx="2" stroke="#173F90" stroke-width="1.5"/><path d="M6 6l12 12" stroke="#173F90" stroke-width="1.5"/></svg>
               </span>
-              <span>Block Card</span>
+              <span data-nb-i18n="quick.block">Block Card</span>
             </a>
             <a href="#" class="quick-action-item">
               <span class="quick-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3L4 7v6c0 5 3.5 8.7 8 10 4.5-1.3 8-5 8-10V7l-8-4z" stroke="#173F90" stroke-width="1.5"/><path d="M12 9v4M12 17h.01" stroke="#173F90" stroke-width="1.5"/></svg>
               </span>
-              <span>Report Fraud</span>
+              <span data-nb-i18n="quick.fraud">Report Fraud</span>
             </a>
           </div>
         </div>
@@ -262,25 +279,25 @@
     <!-- Announcement -->
     <section class="announcement-bar" aria-labelledby="updates-heading">
       <div class="container announcement-inner">
-        <h2 class="sr-only" id="updates-heading">Updates</h2>
+        <h2 class="sr-only" id="updates-heading" data-nb-i18n="updates.heading">Updates</h2>
         <div class="updates-label">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1.02-3.29-2.5-4.03v8.06c1.48-.74 2.5-2.26 2.5-4.03z"/></svg>
-          <span>Updates</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M3 10v4h4l5 5V5L7 10H3zm13.5 2c0-1.77-1.02-3.29-2.5-4.03v8.06c1.48-.74 2.5-2.26 2.5-4.03z"/></svg>
+          <span data-nb-i18n="updates.label">Updates</span>
         </div>
         <div class="ticker-wrap">
           <div class="ticker-content">
-            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Bill tabled in Parliament on 24 Feb 2026.</span>
-            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Training Program scheduled on 19 Feb 2026.</span>
-            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> International Relations meeting on 20 Feb 2026.</span>
-            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Departmental Examination results announced.</span>
-            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Bill tabled in Parliament on 24 Feb 2026.</span>
-            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> Training Program scheduled on 19 Feb 2026.</span>
+            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> <span data-nb-i18n="ticker.1">Bill tabled in Parliament on 24 Feb 2026.</span></span>
+            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> <span data-nb-i18n="ticker.2">Training Program scheduled on 19 Feb 2026.</span></span>
+            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> <span data-nb-i18n="ticker.3">International Relations meeting on 20 Feb 2026.</span></span>
+            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> <span data-nb-i18n="ticker.4">Departmental Examination results announced.</span></span>
+            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> <span data-nb-i18n="ticker.1">Bill tabled in Parliament on 24 Feb 2026.</span></span>
+            <span class="ticker-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#1CC4FF" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/></svg> <span data-nb-i18n="ticker.2">Training Program scheduled on 19 Feb 2026.</span></span>
           </div>
         </div>
         <div class="ticker-controls">
-          <button type="button" class="ticker-btn" aria-label="Previous">&lsaquo;</button>
-          <button type="button" class="ticker-btn" aria-label="Pause">&#10074;&#10074;</button>
-          <button type="button" class="ticker-btn" aria-label="Next">&rsaquo;</button>
+          <button type="button" class="ticker-btn" data-nb-i18n-aria="ticker.prev" aria-label="Previous">&lsaquo;</button>
+          <button type="button" class="ticker-btn" data-nb-i18n-aria="ticker.pause" aria-label="Pause">&#10074;&#10074;</button>
+          <button type="button" class="ticker-btn" data-nb-i18n-aria="ticker.next" aria-label="Next">&rsaquo;</button>
         </div>
       </div>
     </section>
@@ -288,90 +305,90 @@
     <!-- Business Section -->
     <section class="business-section">
       <div class="floating-side-nav">
-        <a href="#" class="float-btn" aria-label="ATM Locator">
+        <a href="#" class="float-btn" data-nb-i18n-aria="float.atm.aria" aria-label="ATM Locator">
           <span class="float-btn-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="white" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="white" stroke-width="1.5"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="white" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="white" stroke-width="1.5"/></svg>
           </span>
-          <span class="float-btn-text float-btn-short">ATM</span>
-          <span class="float-btn-text float-btn-full">ATM Locator</span>
+          <span class="float-btn-text float-btn-short" data-nb-i18n="float.atm.short">ATM</span>
+          <span class="float-btn-text float-btn-full" data-nb-i18n="float.atm.full">ATM Locator</span>
         </a>
-        <a href="#" class="float-btn" aria-label="Branch Locator">
+        <a href="#" class="float-btn" data-nb-i18n-aria="float.branch.aria" aria-label="Branch Locator">
           <span class="float-btn-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l7-4 7 4v14" stroke="white" stroke-width="1.5"/><rect x="9" y="11" width="6" height="6" stroke="white" stroke-width="1.5"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14" stroke="white" stroke-width="1.5"/><rect x="9" y="11" width="6" height="6" stroke="white" stroke-width="1.5"/></svg>
           </span>
-          <span class="float-btn-text float-btn-short">Branch</span>
-          <span class="float-btn-text float-btn-full">Branch Locator</span>
+          <span class="float-btn-text float-btn-short" data-nb-i18n="float.branch.short">Branch</span>
+          <span class="float-btn-text float-btn-full" data-nb-i18n="float.branch.full">Branch Locator</span>
         </a>
       </div>
 
       <div class="container">
         <div class="business-header">
-          <h2 class="business-title">Comprehensive banking solutions to fuel your <strong>business growth</strong></h2>
-          <p class="business-subtitle">From savings to loans, investments to insurance we offer everything you need.</p>
+          <h2 class="business-title"><span data-nb-i18n="business.title.before">Comprehensive banking solutions to fuel your </span><strong data-nb-i18n="business.title.strong">business growth</strong><span data-nb-i18n="business.title.after"></span></h2>
+          <p class="business-subtitle" data-nb-i18n="business.subtitle">From savings to loans, investments to insurance we offer everything you need.</p>
         </div>
 
         <div class="business-carousel">
-          <button type="button" class="carousel-nav-btn prev" aria-label="Previous cards">&lsaquo;</button>
+          <button type="button" class="carousel-nav-btn prev" data-nb-i18n-aria="business.carousel.prev" aria-label="Previous cards">&lsaquo;</button>
           <div class="business-cards">
             <article class="business-card">
                 <div class="card-image">
-                <img src="images/investmentcoin.png" alt="Investment" loading="lazy" decoding="async">
+                <img src="images/investmentcoin.png" alt="Investment" data-nb-i18n-alt="alt.card.investment" loading="lazy" decoding="async">
               </div>
-              <h3 class="card-label">Investment</h3>
+              <h3 class="card-label" data-nb-i18n="card.investment">Investment</h3>
               <div class="card-body">
-                <p>Secure your investments with flexible tenure options.</p>
-                <a href="#" class="card-explore">Explore &rarr;</a>
+                <p data-nb-i18n="card.body.invest">Secure your investments with flexible tenure options.</p>
+                <a href="#" class="card-explore" data-nb-i18n="card.explore">Explore &rarr;</a>
               </div>
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/investmentblock.png" alt="MSME Investment" loading="lazy" decoding="async">
+                <img src="images/investmentblock.png" alt="MSME Investment" data-nb-i18n-alt="alt.card.msme" loading="lazy" decoding="async">
               </div>
-              <h3 class="card-label">Investment</h3>
+              <h3 class="card-label" data-nb-i18n="card.investment">Investment</h3>
               <div class="card-body">
-                <p>Secure your investments with flexible tenure options.</p>
-                <a href="#" class="card-explore">Explore &rarr;</a>
+                <p data-nb-i18n="card.body.invest">Secure your investments with flexible tenure options.</p>
+                <a href="#" class="card-explore" data-nb-i18n="card.explore">Explore &rarr;</a>
               </div>
             </article>
             <article class="business-card business-card-active">
               <div class="card-image">
-                <img src="images/savingaccount.png" alt="Savings Accounts" loading="lazy" decoding="async">
+                <img src="images/savingaccount.png" alt="Savings Accounts" data-nb-i18n-alt="alt.card.savings" loading="lazy" decoding="async">
               </div>
-              <h3 class="card-label">Savings Accounts</h3>
+              <h3 class="card-label" data-nb-i18n="card.savings">Savings Accounts</h3>
               <div class="card-body">
-                <p>Secure your investments with flexible tenure options.</p>
-                <a href="#" class="card-explore">Explore &rarr;</a>
+                <p data-nb-i18n="card.body.invest">Secure your investments with flexible tenure options.</p>
+                <a href="#" class="card-explore" data-nb-i18n="card.explore">Explore &rarr;</a>
               </div>
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/fixeddeposit.png" alt="Fixed Deposits" loading="lazy" decoding="async">
+                <img src="images/fixeddeposit.png" alt="Fixed Deposits" data-nb-i18n-alt="alt.card.fd" loading="lazy" decoding="async">
               </div>
-              <h3 class="card-label">Fixed Deposits</h3>
+              <h3 class="card-label" data-nb-i18n="card.fd">Fixed Deposits</h3>
               <div class="card-body">
-                <p>Secure your future with attractive FD rates.</p>
-                <a href="#" class="card-explore">Explore &rarr;</a>
+                <p data-nb-i18n="card.body.fd">Secure your future with attractive FD rates.</p>
+                <a href="#" class="card-explore" data-nb-i18n="card.explore">Explore &rarr;</a>
               </div>
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/homeloan.png" alt="Home Loans" loading="lazy" decoding="async">
+                <img src="images/homeloan.png" alt="Home Loans" data-nb-i18n-alt="alt.card.home" loading="lazy" decoding="async">
               </div>
-              <h3 class="card-label">Home Loans</h3>
+              <h3 class="card-label" data-nb-i18n="card.home">Home Loans</h3>
               <div class="card-body">
-                <p>Flexible savings options with competitive interest rates.</p>
-                <a href="#" class="card-explore">Explore &rarr;</a>
+                <p data-nb-i18n="card.body.home">Flexible savings options with competitive interest rates.</p>
+                <a href="#" class="card-explore" data-nb-i18n="card.explore">Explore &rarr;</a>
               </div>
             </article>
           </div>
-          <button type="button" class="carousel-nav-btn next" aria-label="Next cards">&rsaquo;</button>
+          <button type="button" class="carousel-nav-btn next" data-nb-i18n-aria="business.carousel.next" aria-label="Next cards">&rsaquo;</button>
         </div>
       </div>
     </section>
 
     <!-- Statistics -->
     <section class="stats-section" aria-labelledby="stats-heading">
-      <h2 class="sr-only" id="stats-heading">Statistics</h2>
+      <h2 class="sr-only" id="stats-heading" data-nb-i18n="stats.heading">Statistics</h2>
       <div class="stats-bg"></div>
       <div class="container stats-inner">
         <div class="stats-card">
@@ -379,21 +396,21 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 19V5M9 19V9M14 19V13M19 19V7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
           <p class="stats-number" data-target="150">0</p>
-          <p class="stats-label">BRANCHES</p>
+          <p class="stats-label" data-nb-i18n="stats.branches">BRANCHES</p>
         </div>
         <div class="stats-card">
           <div class="stats-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/><path d="M8 8h8M8 12h8M8 16h5" stroke="white" stroke-width="1.5"/></svg>
           </div>
           <p class="stats-number" data-target="200">0</p>
-          <p class="stats-label">ATMS</p>
+          <p class="stats-label" data-nb-i18n="stats.atms">ATMS</p>
         </div>
         <div class="stats-card">
           <div class="stats-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="white" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="white" stroke-width="1.5"/></svg>
           </div>
           <p class="stats-number" data-target="1000000">0</p>
-          <p class="stats-label">SAVINGS ACCOUNTS</p>
+          <p class="stats-label" data-nb-i18n="stats.savings">SAVINGS ACCOUNTS</p>
         </div>
       </div>
     </section>
@@ -401,52 +418,52 @@
     <!-- Interest Rates -->
     <section class="interest-section">
       <div class="container">
-        <h2 class="section-title">Interest Rates</h2>
+        <h2 class="section-title" data-nb-i18n="interest.title">Interest Rates</h2>
         <div class="interest-icons">
-          <img src="images/homeloaner.png" alt="Home Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/carloan.png" alt="Car Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/goldloan.png" alt="Gold Loan" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/eduloan.png" alt="Education Loan" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/homeloaner.png" alt="Home Loan" data-nb-i18n-alt="alt.loan.home" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/carloan.png" alt="Car Loan" data-nb-i18n-alt="alt.loan.car" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/goldloan.png" alt="Gold Loan" data-nb-i18n-alt="alt.loan.gold" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/eduloan.png" alt="Education Loan" data-nb-i18n-alt="alt.loan.edu" class="loan-icon" loading="lazy" decoding="async">
         </div>
         <div class="interest-grid">
           <div class="interest-item">
             <p class="interest-rate">7.15 <span>%</span></p>
-            <p class="interest-name">Apna Ashiyana Home Loan</p>
-            <a href="#" class="btn-read-more">Read More</a>
+            <p class="interest-name" data-nb-i18n="interest.home">Apna Ashiyana Home Loan</p>
+            <a href="#" class="btn btn-primary btn-read-more" data-nb-i18n="interest.readmore">Read More</a>
           </div>
           <div class="interest-item">
             <p class="interest-rate">7.65 <span>%</span></p>
-            <p class="interest-name">Suhana Safar Car Loan</p>
-            <a href="#" class="btn-read-more">Read More</a>
+            <p class="interest-name" data-nb-i18n="interest.car">Suhana Safar Car Loan</p>
+            <a href="#" class="btn btn-primary btn-read-more" data-nb-i18n="interest.readmore">Read More</a>
           </div>
           <div class="interest-item">
             <p class="interest-rate">9.75 <span>%</span></p>
-            <p class="interest-name">Naini Aura Gold Loan</p>
-            <a href="#" class="btn-read-more">Read More</a>
+            <p class="interest-name" data-nb-i18n="interest.gold">Naini Aura Gold Loan</p>
+            <a href="#" class="btn btn-primary btn-read-more" data-nb-i18n="interest.readmore">Read More</a>
           </div>
           <div class="interest-item">
             <p class="interest-rate">8.9 <span>%</span></p>
-            <p class="interest-name">Gyani Education Loan</p>
-            <a href="#" class="btn-read-more">Read More</a>
+            <p class="interest-name" data-nb-i18n="interest.edu">Gyani Education Loan</p>
+            <a href="#" class="btn btn-primary btn-read-more" data-nb-i18n="interest.readmore">Read More</a>
           </div>
         </div>
-        <a href="#" class="btn-view-all">View All Interest Rates &rarr;</a>
+        <a href="#" class="btn btn-primary btn-view-all" data-nb-i18n="interest.viewall">View All Interest Rates &rarr;</a>
       </div>
     </section>
 
     <!-- Why Choose -->
     <section class="why-choose-section">
       <div class="container">
-        <h2 class="why-title">Why Choose Nainital Bank?</h2>
-        <p class="why-subtitle">Experience banking that prioritizes your security, convenience, and financial growth.</p>
+        <h2 class="why-title" data-nb-i18n="why.title">Why Choose Nainital Bank?</h2>
+        <p class="why-subtitle" data-nb-i18n="why.subtitle">Experience banking that prioritizes your security, convenience, and financial growth.</p>
         <div class="why-grid">
           <div class="why-item">
             <div class="why-icon">
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M8 38V18l16-10 16 10v20H8z" stroke="white" stroke-width="1.5"/><rect x="18" y="26" width="12" height="12" stroke="white" stroke-width="1.5"/><path d="M22 30h4v4h-4z" fill="white"/></svg>
             </div>
             <div class="why-text">
-              <h3>Bank-Grade Security</h3>
-              <p>Your data and transactions are protected advanced encryption and multi-factor authentication.</p>
+              <h3 data-nb-i18n="why.security.title">Bank-Grade Security</h3>
+              <p data-nb-i18n="why.security.desc">Your data and transactions are protected advanced encryption and multi-factor authentication.</p>
             </div>
           </div>
           <div class="why-item">
@@ -454,8 +471,8 @@
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="white" stroke-width="1.5"/><text x="24" y="22" text-anchor="middle" fill="white" font-size="14" font-weight="bold">100</text><text x="24" y="34" text-anchor="middle" fill="white" font-size="8">YEARS</text></svg>
             </div>
             <div class="why-text">
-              <h3>100+ Years Legacy</h3>
-              <p>Your data and transactions are protected advanced encryption and multi-factor authentication.</p>
+              <h3 data-nb-i18n="why.legacy.title">100+ Years Legacy</h3>
+              <p data-nb-i18n="why.legacy.desc">Your data and transactions are protected advanced encryption and multi-factor authentication.</p>
             </div>
           </div>
           <div class="why-item">
@@ -463,8 +480,8 @@
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M12 28c0-6 4-10 12-10s12 4 12 10" stroke="white" stroke-width="1.5"/><ellipse cx="24" cy="20" rx="8" ry="6" stroke="white" stroke-width="1.5"/><text x="24" y="38" text-anchor="middle" fill="white" font-size="10" font-weight="bold">24/7</text></svg>
             </div>
             <div class="why-text">
-              <h3>24/7 Customer Support</h3>
-              <p>Your data and transactions are protected advanced encryption and multi-factor authentication.</p>
+              <h3 data-nb-i18n="why.support.title">24/7 Customer Support</h3>
+              <p data-nb-i18n="why.support.desc">Your data and transactions are protected advanced encryption and multi-factor authentication.</p>
             </div>
           </div>
           <div class="why-item">
@@ -472,13 +489,13 @@
               <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="white" stroke-width="1.5"/><text x="24" y="30" text-anchor="middle" fill="white" font-size="18" font-weight="bold">&#8377;</text></svg>
             </div>
             <div class="why-text">
-              <h3>RBI Insured</h3>
-              <p>Your data and transactions are protected advanced encryption and multi-factor authentication.</p>
+              <h3 data-nb-i18n="why.rbi.title">RBI Insured</h3>
+              <p data-nb-i18n="why.rbi.desc">Your data and transactions are protected advanced encryption and multi-factor authentication.</p>
             </div>
           </div>
         </div>
-        <p class="why-footer-text">Join over 1 million satisfied customers who trust Nainital Bank for their financial needs.</p>
-        <a href="#" class="btn-get-started">Get Started Today &rarr;</a>
+        <p class="why-footer-text" data-nb-i18n="why.footer">Join over 1 million satisfied customers who trust Nainital Bank for their financial needs.</p>
+        <a href="#" class="btn btn-primary btn-get-started" data-nb-i18n="why.cta">Get Started Today &rarr;</a>
       </div>
     </section>
 
@@ -489,39 +506,39 @@
           <div class="announcements-title-wrap">
             <svg class="bell-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="#173F90" stroke-width="1.5"/><path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="#173F90" stroke-width="1.5"/></svg>
             <div>
-              <h2 class="section-title left">Latest Announcements</h2>
-              <p class="announcements-sub">Stay updated with the latest news, offers, and updates from Nainital Bank.</p>
+              <h2 class="section-title left" data-nb-i18n="ann.title">Latest Announcements</h2>
+              <p class="announcements-sub" data-nb-i18n="ann.subtitle">Stay updated with the latest news, offers, and updates from Nainital Bank.</p>
             </div>
           </div>
-          <a href="#" class="view-all-link">View All &rarr;</a>
+          <a href="#" class="view-all-link" data-nb-i18n="ann.viewall">View All &rarr;</a>
         </div>
         <div class="announcements-grid">
           <article class="announcement-card">
             <div class="ann-meta">
-              <span class="ann-badge offer">Offer</span>
+              <span class="ann-badge offer" data-nb-i18n="ann.badge.offer">Offer</span>
               <span class="ann-date">Dec 1, 2025</span>
             </div>
-            <h3>Special Fixed Deposit Rates</h3>
-            <p>Enjoy enhanced FD rates up to 7.5% p.a. for senior citizens on select tenures. Limited period offer.</p>
-            <a href="#" class="ann-read-more">Read More &rarr;</a>
+            <h3 data-nb-i18n="ann.1.title">Special Fixed Deposit Rates</h3>
+            <p data-nb-i18n="ann.1.desc">Enjoy enhanced FD rates up to 7.5% p.a. for senior citizens on select tenures. Limited period offer.</p>
+            <a href="#" class="ann-read-more" data-nb-i18n="ann.readmore">Read More &rarr;</a>
           </article>
           <article class="announcement-card">
             <div class="ann-meta">
-              <span class="ann-badge news">News</span>
+              <span class="ann-badge news" data-nb-i18n="ann.badge.news">News</span>
               <span class="ann-date">Nov 28, 2025</span>
             </div>
-            <h3>New Branch Opening in Dehradun</h3>
-            <p>We are excited to announce the opening of our new branch at Rajpur Road, Dehradun.</p>
-            <a href="#" class="ann-read-more">Read More &rarr;</a>
+            <h3 data-nb-i18n="ann.2.title">New Branch Opening in Dehradun</h3>
+            <p data-nb-i18n="ann.2.desc">We are excited to announce the opening of our new branch at Rajpur Road, Dehradun.</p>
+            <a href="#" class="ann-read-more" data-nb-i18n="ann.readmore">Read More &rarr;</a>
           </article>
           <article class="announcement-card">
             <div class="ann-meta">
-              <span class="ann-badge update">Update</span>
+              <span class="ann-badge update" data-nb-i18n="ann.badge.update">Update</span>
               <span class="ann-date">Nov 25, 2025</span>
             </div>
-            <h3>Digital Banking Update</h3>
-            <p>Experience our upgraded mobile banking app with enhanced security and new features.</p>
-            <a href="#" class="ann-read-more">Read More &rarr;</a>
+            <h3 data-nb-i18n="ann.3.title">Digital Banking Update</h3>
+            <p data-nb-i18n="ann.3.desc">Experience our upgraded mobile banking app with enhanced security and new features.</p>
+            <a href="#" class="ann-read-more" data-nb-i18n="ann.readmore">Read More &rarr;</a>
           </article>
         </div>
       </div>
@@ -531,25 +548,25 @@
     <section class="mobile-app-section">
       <div class="container mobile-app-inner">
         <div class="app-visual">
-          <img src="images/phone.png" alt="Nainital Bank Mobile App" class="phone-img" loading="lazy" decoding="async">
+          <img src="images/phone.png" alt="Nainital Bank Mobile App" data-nb-i18n-alt="alt.app.phone" class="phone-img" loading="lazy" decoding="async">
           <div class="app-badges-side">
             <div class="qr-code">
-              <img src="images/qrcode.png" alt="QR Code" loading="lazy" decoding="async">
+              <img src="images/qrcode.png" alt="QR Code" data-nb-i18n-alt="alt.app.qr" loading="lazy" decoding="async">
             </div>
           </div>
         </div>
         <div class="app-content">
-          <span class="app-pill">Nainital Bank Mobile App</span>
-          <h2 class="app-title">Smart Banking <span class="accent">Anywhere, Anytime</span></h2>
-          <p class="app-desc">Manage accounts, transfer funds, pay bills and track transactions — all from one secure mobile platform.</p>
+          <span class="app-pill" data-nb-i18n="app.pill">Nainital Bank Mobile App</span>
+          <h2 class="app-title"><span data-nb-i18n="app.title.l1">Smart Banking </span><span class="accent" data-nb-i18n="app.title.l2">Anywhere, Anytime</span></h2>
+          <p class="app-desc" data-nb-i18n="app.desc">Manage accounts, transfer funds, pay bills and track transactions — all from one secure mobile platform.</p>
           <div class="app-store-buttons">
             <a href="#" class="store-btn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              <span><small>Download on the</small> App Store</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <span><small data-nb-i18n="app.ios.small">Download on the</small> <span data-nb-i18n="app.ios.name">App Store</span></span>
             </a>
             <a href="#" class="store-btn">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/></svg>
-              <span><small>Get it on</small> Google Play</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM16.81 15.12L6.05 21.34L14.54 12.85L16.81 15.12ZM20.16 10.81C20.5 11.08 20.75 11.5 20.75 12C20.75 12.5 20.53 12.9 20.18 13.18L17.89 14.5L15.39 12L17.89 9.5L20.16 10.81ZM6.05 2.66L16.81 8.88L14.54 11.15L6.05 2.66Z"/></svg>
+              <span><small data-nb-i18n="app.android.small">Get it on</small> <span data-nb-i18n="app.android.name">Google Play</span></span>
             </a>
           </div>
         </div>
@@ -562,54 +579,54 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <h3 class="footer-heading">Nainital Bank</h3>
-        <p class="footer-about">Your trusted banking partner for over a century, committed to serving communities with integrity and innovation.</p>
+        <p class="footer-about" data-nb-i18n="footer.about">Your trusted banking partner for over a century, committed to serving communities with integrity and innovation.</p>
         <div class="social-icons">
-          <a href="#" aria-label="Facebook">
+          <a href="#" data-nb-i18n-aria="social.facebook" aria-label="Facebook">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
-          <a href="#" aria-label="Twitter">
+          <a href="#" data-nb-i18n-aria="social.twitter" aria-label="Twitter">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M4 4l7.5 9.5L4 20h2.5l6-7.5L17 20h4l-7.8-10L21 4h-2.5l-5.8 7.2L8 4H4z"/></svg>
           </a>
-          <a href="#" aria-label="LinkedIn">
+          <a href="#" data-nb-i18n-aria="social.linkedin" aria-label="LinkedIn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-13h4v2M2 9h4v13H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
           </a>
-          <a href="#" aria-label="YouTube">
+          <a href="#" data-nb-i18n-aria="social.youtube" aria-label="YouTube">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
           </a>
         </div>
       </div>
       <div class="footer-col">
-        <h3 class="footer-heading">Personal Banking</h3>
+        <h3 class="footer-heading" data-nb-i18n="footer.personal">Personal Banking</h3>
         <ul class="footer-links">
-          <li><a href="#">Savings Accounts</a></li>
-          <li><a href="#">Current Accounts</a></li>
-          <li><a href="#">Fixed Deposits</a></li>
-          <li><a href="#">Recurring Deposits</a></li>
-          <li><a href="#">Debit Cards</a></li>
-          <li><a href="#">Credit Cards</a></li>
+          <li><a href="#" data-nb-i18n="footer.savings">Savings Accounts</a></li>
+          <li><a href="#" data-nb-i18n="footer.current">Current Accounts</a></li>
+          <li><a href="#" data-nb-i18n="footer.fd">Fixed Deposits</a></li>
+          <li><a href="#" data-nb-i18n="footer.rd">Recurring Deposits</a></li>
+          <li><a href="#" data-nb-i18n="footer.debit">Debit Cards</a></li>
+          <li><a href="#" data-nb-i18n="footer.credit">Credit Cards</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h3 class="footer-heading">Loans &amp; Services</h3>
+        <h3 class="footer-heading" data-nb-i18n="footer.loans">Loans &amp; Services</h3>
         <ul class="footer-links">
-          <li><a href="#">Home Loans</a></li>
-          <li><a href="#">Personal Loans</a></li>
-          <li><a href="#">Vehicle Loans</a></li>
-          <li><a href="#">Education Loans</a></li>
-          <li><a href="#">MSME Loans</a></li>
-          <li><a href="#">Gold Loans</a></li>
+          <li><a href="#" data-nb-i18n="footer.homeloan">Home Loans</a></li>
+          <li><a href="#" data-nb-i18n="footer.personalloan">Personal Loans</a></li>
+          <li><a href="#" data-nb-i18n="footer.vehicle">Vehicle Loans</a></li>
+          <li><a href="#" data-nb-i18n="footer.education">Education Loans</a></li>
+          <li><a href="#" data-nb-i18n="footer.msme">MSME Loans</a></li>
+          <li><a href="#" data-nb-i18n="footer.goldloan">Gold Loans</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h3 class="footer-heading">Contact Us</h3>
+        <h3 class="footer-heading" data-nb-i18n="footer.contact">Contact Us</h3>
         <div class="contact-item">
           <span class="contact-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#1CC4FF" stroke-width="1.5"/></svg>
           </span>
           <div>
-            <strong>Customer Care</strong>
+            <strong data-nb-i18n="footer.care.label">Customer Care</strong>
             <p>1800-180-2345</p>
-            <small>24/7 Support</small>
+            <small data-nb-i18n="footer.care.hours">24/7 Support</small>
           </div>
         </div>
         <div class="contact-item">
@@ -617,7 +634,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#1CC4FF" stroke-width="1.5"/><path d="M22 6l-10 7L2 6" stroke="#1CC4FF" stroke-width="1.5"/></svg>
           </span>
           <div>
-            <strong>Email</strong>
+            <strong data-nb-i18n="footer.email">Email</strong>
             <p>support@nainitalbank.co.in</p>
           </div>
         </div>
@@ -626,52 +643,58 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#1CC4FF" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="#1CC4FF" stroke-width="1.5"/></svg>
           </span>
           <div>
-            <strong>Head Office</strong>
-            <p>Nainital, Uttarakhand</p>
+            <strong data-nb-i18n="footer.office">Head Office</strong>
+            <p data-nb-i18n="footer.location">Nainital, Uttarakhand</p>
           </div>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p>&copy; 2025 Nainital Bank Ltd. All rights reserved.</p>
+        <p data-nb-i18n="footer.copyright">&copy; 2025 Nainital Bank Ltd. All rights reserved.</p>
         <nav class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Security</a>
-          <a href="#">Sitemap</a>
-          <a href="#">Careers</a>
+          <a href="#" data-nb-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-nb-i18n="footer.terms">Terms of Service</a>
+          <a href="#" data-nb-i18n="footer.security">Security</a>
+          <a href="#" data-nb-i18n="footer.sitemap">Sitemap</a>
+          <a href="#" data-nb-i18n="footer.careers">Careers</a>
         </nav>
       </div>
     </div>
-    <a href="#" class="back-to-top" aria-label="Back to top">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-    </a>
   </footer>
 
   <!-- Fixed Sidebars -->
-  <aside class="follow-sidebar" aria-label="Follow us on social media">
-    <span class="follow-text">Follow us on</span>
-    <a href="#" class="follow-icon fb" aria-label="Facebook">
+  <aside class="follow-sidebar" data-nb-i18n-aria="follow.sidebar" aria-label="Follow us on social media">
+    <span class="follow-text" data-nb-i18n="follow.text">Follow us on</span>
+    <a href="#" class="follow-icon fb" data-nb-i18n-aria="social.facebook" aria-label="Facebook">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
     </a>
-    <a href="#" class="follow-icon tw" aria-label="Twitter">
+    <a href="#" class="follow-icon tw" data-nb-i18n-aria="social.twitter" aria-label="Twitter">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M4 4l7.5 9.5L4 20h2.5l6-7.5L17 20h4l-7.8-10L21 4h-2.5l-5.8 7.2L8 4H4z"/></svg>
     </a>
-    <a href="#" class="follow-icon yt" aria-label="YouTube">
+    <a href="#" class="follow-icon yt" data-nb-i18n-aria="social.youtube" aria-label="YouTube">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
     </a>
-    <a href="#" class="follow-icon ig" aria-label="Instagram">
+    <a href="#" class="follow-icon ig" data-nb-i18n-aria="social.instagram" aria-label="Instagram">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.5" fill="none"/></svg>
     </a>
-    <a href="#" class="follow-icon li" aria-label="LinkedIn">
+    <a href="#" class="follow-icon li" data-nb-i18n-aria="social.linkedin" aria-label="LinkedIn">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-13h4v2M2 9h4v13H2zM4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
     </a>
   </aside>
 
-  <a href="#" class="back-to-top" aria-label="Back to top">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-  </a>
+  <div class="fixed-action-stack" data-nb-i18n-aria="fixed.tools" aria-label="Page tools">
+    <button type="button" class="nb-a11y-fab" id="nb-open-a11y" data-nb-i18n-aria="a11y.open" aria-label="Open accessibility options">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+    <a href="#site-title" class="back-to-top" data-nb-i18n-aria="a11y.backtop" aria-label="Back to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </a>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g.min.js" defer></script>
+  <script src="https://cdn.ux4g.gov.in/accessibility-beta-v1.15/accessibility-widget.js" defer></script>
   <script>
     (function(){
       const carouselEl = document.querySelector('.hero-carousel');
@@ -679,16 +702,21 @@
       const dots = Array.from(document.querySelectorAll('.carousel-dots .dot'));
       const prevBtn = document.querySelector('.carousel-prev');
       const nextBtn = document.querySelector('.carousel-next');
-      if (!slides.length) return;
-
       let current = 0;
+      if (!slides.length) {
+        // Carousel optional — skip slide logic only
+      } else {
       const intervalMs = 4000;
       let timer = null;
 
       function show(index){
         index = (index + slides.length) % slides.length;
         slides.forEach((s,i)=> s.classList.toggle('active', i===index));
-        dots.forEach((d,i)=> d.classList.toggle('active', i===index));
+        dots.forEach((d,i)=>{
+          const on = i === index;
+          d.classList.toggle('active', on);
+          d.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
         current = index;
       }
 
@@ -697,7 +725,11 @@
 
       function start(){ stop(); timer = setInterval(next, intervalMs); }
       function stop(){ if (timer) { clearInterval(timer); timer = null; } }
-      function reset(){ start(); }
+      function reset(){
+        if (!prefersReducedMotion) start();
+      }
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       prevBtn && prevBtn.addEventListener('click', ()=>{ prev(); reset(); });
       nextBtn && nextBtn.addEventListener('click', ()=>{ next(); reset(); });
@@ -706,7 +738,9 @@
       // pause on hover (desktop)
       if (carouselEl) {
         carouselEl.addEventListener('mouseenter', stop);
-        carouselEl.addEventListener('mouseleave', start);
+        carouselEl.addEventListener('mouseleave', () => {
+          if (!prefersReducedMotion) start();
+        });
       }
 
       // basic touch swipe support
@@ -716,9 +750,10 @@
       carouselEl && carouselEl.addEventListener('touchstart', (e)=>{ touchStartX = e.changedTouches[0].screenX; stop(); });
       carouselEl && carouselEl.addEventListener('touchend', (e)=>{ touchEndX = e.changedTouches[0].screenX; const dx = touchEndX - touchStartX; if (Math.abs(dx) > touchThreshold) { dx < 0 ? next() : prev(); } reset(); });
 
-      // Initialize autoplay
+      // Initialize autoplay (UX4G: respect prefers-reduced-motion)
       show(0);
-      start();
+      if (!prefersReducedMotion) start();
+      }
 
       // Animated counters for stats
       const counters = Array.from(document.querySelectorAll('.stats-number[data-target]'));
@@ -780,6 +815,92 @@
           }, 120);
         });
       })();
+
+    })();
+
+    // Header accessibility controls (isolated from carousel / UX4G widget CSS)
+    (function(){
+      const MIN_SCALE = 0.85;
+      const MAX_SCALE = 1.35;
+      const STEP = 0.05;
+      const FONT_SELECTOR = 'main p, main h1, main h2, main h3, main h4, main h5, main h6, main li, main a, main span, main label, main button, .site-header a, .site-header p, .site-header h1, .site-header button, .site-footer p, .site-footer a, .site-footer h3';
+      let fontScale = parseFloat(localStorage.getItem('nainital-font-scale')) || 1;
+      const baseFontSizes = new Map();
+
+      document.querySelectorAll(FONT_SELECTOR).forEach(el => {
+        const px = parseFloat(getComputedStyle(el).fontSize);
+        if (!isNaN(px)) baseFontSizes.set(el, px);
+      });
+
+      function applyFontScale(){
+        document.documentElement.style.setProperty('--nb-font-scale', String(fontScale));
+        localStorage.setItem('nainital-font-scale', String(fontScale));
+        document.querySelectorAll(FONT_SELECTOR).forEach(el => {
+          const base = baseFontSizes.get(el);
+          if (base) el.style.fontSize = (base * fontScale) + 'px';
+        });
+      }
+
+      const dec = document.getElementById('nb-font-decrease');
+      const inc = document.getElementById('nb-font-increase');
+      const resetBtn = document.getElementById('nb-font-reset');
+
+      function stop(e){ e.preventDefault(); e.stopPropagation(); }
+
+      dec && dec.addEventListener('click', (e)=>{
+        stop(e);
+        fontScale = Math.max(MIN_SCALE, +(fontScale - STEP).toFixed(2));
+        applyFontScale();
+      });
+      inc && inc.addEventListener('click', (e)=>{
+        stop(e);
+        fontScale = Math.min(MAX_SCALE, +(fontScale + STEP).toFixed(2));
+        applyFontScale();
+      });
+      resetBtn && resetBtn.addEventListener('click', (e)=>{
+        stop(e);
+        fontScale = 1;
+        applyFontScale();
+      });
+      applyFontScale();
+
+      const themeToggle = document.getElementById('nb-theme-toggle');
+      if (themeToggle) {
+        const storedTheme = localStorage.getItem('nainital-dark-mode') === 'true';
+        themeToggle.checked = storedTheme;
+        const applyTheme = () => {
+          const on = themeToggle.checked;
+          document.body.classList.toggle('nb-dark-mode', on);
+          document.body.classList.toggle('dark-mode', on);
+          localStorage.setItem('nainital-dark-mode', String(on));
+        };
+        themeToggle.addEventListener('change', (e)=>{
+          e.stopPropagation();
+          applyTheme();
+        });
+        themeToggle.addEventListener('click', (e)=> e.stopPropagation());
+        applyTheme();
+      }
+
+      const langSelect = document.getElementById('nb-language');
+      if (langSelect && window.NB_I18N) {
+        const savedLang = localStorage.getItem('nainital-lang') || 'en';
+        langSelect.value = savedLang;
+        NB_I18N.apply(savedLang);
+        langSelect.addEventListener('change', (e)=>{
+          e.stopPropagation();
+          NB_I18N.apply(langSelect.value);
+        });
+        langSelect.addEventListener('click', (e)=> e.stopPropagation());
+      }
+
+      const a11yFab = document.getElementById('nb-open-a11y');
+      if (a11yFab) {
+        a11yFab.addEventListener('click', ()=>{
+          const widgetTrigger = document.getElementById('uw-widget-custom-trigger');
+          if (widgetTrigger) widgetTrigger.click();
+        });
+      }
     })();
   </script>
 </body>
