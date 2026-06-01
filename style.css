@@ -1255,6 +1255,7 @@ main .container,
   display: flex;
   flex-direction: column;
   gap: 8px;
+  pointer-events: auto;
 }
 
 .float-btn {
