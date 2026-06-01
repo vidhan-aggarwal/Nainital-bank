@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Nainital Bank — personal and business banking, loans, deposits, and digital services since 1922.">
   <title>Nainital Bank - A Legacy of Trust</title>
-  <link rel="preload" href="style.css" as="style">
-  <link rel="preload" as="image" href="images/banner-image-600.jpg" imagesrcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w" imagesizes="(max-width: 600px) 100vw, 1020px">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" as="image" href="images/logo.png" type="image/png">
+  <link rel="preload" as="image" href="images/banner-image-1020.jpg" type="image/jpeg">
+  <link href="https://cdn.ux4g.gov.in/UX4G@2.0.8/css/ux4g-min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,7 +62,7 @@
     <div class="header-main">
       <div class="container header-main-inner">
         <a href="#" class="logo-block">
-          <img src="images/logo.png" alt="Nainital Bank" data-nb-i18n-alt="logo.alt" class="logo-img" width="56" height="56" decoding="async" fetchpriority="low">
+          <img src="images/logo.png" alt="Nainital Bank" data-nb-i18n-alt="logo.alt" class="logo-img">
           <div class="logo-text">
             <h1 class="logo-title" id="site-title">Nainital Bank</h1>
             <p class="logo-subtitle" data-nb-i18n="logo.subtitle">Estb 1922 | A Legacy of Trust</p>
@@ -102,49 +107,50 @@
               <div class="hero-carousel">
                 <div class="hero-slides">
                   <img
-                    src="images/banner-image-600.jpg"
+                    src="images/banner-image-1020.jpg"
                     srcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w"
                     sizes="(max-width: 600px) 100vw, 1020px"
                     alt="Suhana Safar - Family with car"
                     data-nb-i18n-alt="alt.hero1"
-                    class="hero-slide active"
-                    width="1020"
-                    height="380"
-                    fetchpriority="high"
+                    class="hero-slide"
+                    loading="eager"
                     decoding="async"
                   >
-                  <img data-src="images/hero2.png" alt="Hero 2" data-nb-i18n-alt="alt.hero2" class="hero-slide" width="1020" height="380" decoding="async">
+                  <img src="images/hero2.png" alt="Hero 2" data-nb-i18n-alt="alt.hero2" class="hero-slide" loading="lazy" decoding="async">
                   <img
-                    data-src="images/hero3-640.jpg"
-                    data-srcset="images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w"
-                    data-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                    src="images/hero3-1280.jpg"
+                    srcset="images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w, images/hero3.png 2048w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     width="1020"
                     height="380"
                     alt="Hero 3"
                     data-nb-i18n-alt="alt.hero3"
                     class="hero-slide"
+                    loading="lazy"
                     decoding="async"
                   >
                   <img
                     width="1020"
                     height="380"
-                    data-src="images/hero4-640.jpg"
-                    data-srcset="images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w"
-                    data-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                    src="images/hero4-1280.jpg"
+                    srcset="images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w, images/hero4.png 2048w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     alt="Hero 4"
                     data-nb-i18n-alt="alt.hero4"
                     class="hero-slide"
+                    loading="lazy"
                     decoding="async"
                   >
                   <img
-                    data-src="images/hero5-640.jpg"
-                    data-srcset="images/hero5-640.jpg 640w, images/hero5-1280.jpg 1280w"
-                    data-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                    src="images/hero5-1280.jpg"
+                    srcset="images/hero5-640.jpg 640w, images/hero5-1280.jpg 1280w, images/hero5.png 4160w"
+                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     width="1020"
                     height="380"
                     alt="Hero 5"
                     data-nb-i18n-alt="alt.hero5"
                     class="hero-slide"
+                    loading="lazy"
                     decoding="async"
                   >
                 </div>
@@ -298,6 +304,23 @@
 
     <!-- Business Section -->
     <section class="business-section">
+      <div class="floating-side-nav">
+        <a href="#" class="float-btn" data-nb-i18n-aria="float.atm.aria" aria-label="ATM Locator">
+          <span class="float-btn-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="white" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="white" stroke-width="1.5"/></svg>
+          </span>
+          <span class="float-btn-text float-btn-short" data-nb-i18n="float.atm.short">ATM</span>
+          <span class="float-btn-text float-btn-full" data-nb-i18n="float.atm.full">ATM Locator</span>
+        </a>
+        <a href="#" class="float-btn" data-nb-i18n-aria="float.branch.aria" aria-label="Branch Locator">
+          <span class="float-btn-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14" stroke="white" stroke-width="1.5"/><rect x="9" y="11" width="6" height="6" stroke="white" stroke-width="1.5"/></svg>
+          </span>
+          <span class="float-btn-text float-btn-short" data-nb-i18n="float.branch.short">Branch</span>
+          <span class="float-btn-text float-btn-full" data-nb-i18n="float.branch.full">Branch Locator</span>
+        </a>
+      </div>
+
       <div class="container">
         <div class="business-header">
           <h2 class="business-title"><span data-nb-i18n="business.title.before">Comprehensive banking solutions to fuel your </span><strong data-nb-i18n="business.title.strong">business growth</strong><span data-nb-i18n="business.title.after"></span></h2>
@@ -309,7 +332,7 @@
           <div class="business-cards">
             <article class="business-card">
                 <div class="card-image">
-                <img data-defer-src="images/investmentcoin.png" alt="Investment" data-nb-i18n-alt="alt.card.investment" width="280" height="140" decoding="async">
+                <img src="images/investmentcoin.png" alt="Investment" data-nb-i18n-alt="alt.card.investment" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.investment">Investment</h3>
               <div class="card-body">
@@ -319,7 +342,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img data-defer-src="images/investmentblock.png" alt="MSME Investment" data-nb-i18n-alt="alt.card.msme" width="280" height="140" decoding="async">
+                <img src="images/investmentblock.png" alt="MSME Investment" data-nb-i18n-alt="alt.card.msme" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.investment">Investment</h3>
               <div class="card-body">
@@ -329,7 +352,7 @@
             </article>
             <article class="business-card business-card-active">
               <div class="card-image">
-                <img data-defer-src="images/savingaccount.png" alt="Savings Accounts" data-nb-i18n-alt="alt.card.savings" width="280" height="140" decoding="async">
+                <img src="images/savingaccount.png" alt="Savings Accounts" data-nb-i18n-alt="alt.card.savings" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.savings">Savings Accounts</h3>
               <div class="card-body">
@@ -339,7 +362,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img data-defer-src="images/fixeddeposit.png" alt="Fixed Deposits" data-nb-i18n-alt="alt.card.fd" width="280" height="140" decoding="async">
+                <img src="images/fixeddeposit.png" alt="Fixed Deposits" data-nb-i18n-alt="alt.card.fd" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.fd">Fixed Deposits</h3>
               <div class="card-body">
@@ -349,7 +372,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img data-defer-src="images/homeloan.png" alt="Home Loans" data-nb-i18n-alt="alt.card.home" width="280" height="140" decoding="async">
+                <img src="images/homeloan.png" alt="Home Loans" data-nb-i18n-alt="alt.card.home" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.home">Home Loans</h3>
               <div class="card-body">
@@ -525,7 +548,7 @@
     <section class="mobile-app-section">
       <div class="container mobile-app-inner">
         <div class="app-visual">
-          <img data-defer-src="images/phone.png" alt="Nainital Bank Mobile App" data-nb-i18n-alt="alt.app.phone" class="phone-img" width="320" height="420" decoding="async">
+          <img src="images/phone.png" alt="Nainital Bank Mobile App" data-nb-i18n-alt="alt.app.phone" class="phone-img" loading="lazy" decoding="async">
           <div class="app-badges-side">
             <div class="qr-code">
               <img src="images/qrcode.png" alt="QR Code" data-nb-i18n-alt="alt.app.qr" loading="lazy" decoding="async">
@@ -641,23 +664,6 @@
   </footer>
 
   <!-- Fixed Sidebars -->
-  <nav class="floating-side-nav" data-nb-i18n-aria="float.nav" aria-label="Locators">
-    <a href="#" class="float-btn" data-nb-i18n-aria="float.atm.aria" aria-label="ATM Locator">
-      <span class="float-btn-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="white" stroke-width="1.5"/><circle cx="12" cy="9" r="2.5" stroke="white" stroke-width="1.5"/></svg>
-      </span>
-      <span class="float-btn-text float-btn-short" data-nb-i18n="float.atm.short">ATM</span>
-      <span class="float-btn-text float-btn-full" data-nb-i18n="float.atm.full">ATM Locator</span>
-    </a>
-    <a href="#" class="float-btn" data-nb-i18n-aria="float.branch.aria" aria-label="Branch Locator">
-      <span class="float-btn-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14" stroke="white" stroke-width="1.5"/><rect x="9" y="11" width="6" height="6" stroke="white" stroke-width="1.5"/></svg>
-      </span>
-      <span class="float-btn-text float-btn-short" data-nb-i18n="float.branch.short">Branch</span>
-      <span class="float-btn-text float-btn-full" data-nb-i18n="float.branch.full">Branch Locator</span>
-    </a>
-  </nav>
-
   <aside class="follow-sidebar" data-nb-i18n-aria="follow.sidebar" aria-label="Follow us on social media">
     <span class="follow-text" data-nb-i18n="follow.text">Follow us on</span>
     <a href="#" class="follow-icon fb" data-nb-i18n-aria="social.facebook" aria-label="Facebook">
@@ -686,8 +692,10 @@
     </a>
   </div>
 
-  <script src="i18n.js" defer></script>
-  <script defer>
+  <script src="i18n.js"></script>
+  <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g.min.js" defer></script>
+  <script src="https://cdn.ux4g.gov.in/accessibility-beta-v1.15/accessibility-widget.js" defer></script>
+  <script>
     (function(){
       const carouselEl = document.querySelector('.hero-carousel');
       const slides = Array.from(document.querySelectorAll('.hero-slide'));
@@ -701,16 +709,8 @@
       const intervalMs = 4000;
       let timer = null;
 
-      function hydrateSlide(slide){
-        if (!slide || slide.src || !slide.dataset.src) return;
-        slide.src = slide.dataset.src;
-        if (slide.dataset.srcset) slide.srcset = slide.dataset.srcset;
-        if (slide.dataset.sizes) slide.sizes = slide.dataset.sizes;
-      }
-
       function show(index){
         index = (index + slides.length) % slides.length;
-        hydrateSlide(slides[index]);
         slides.forEach((s,i)=> s.classList.toggle('active', i===index));
         dots.forEach((d,i)=>{
           const on = i === index;
@@ -895,40 +895,10 @@
       }
 
       const a11yFab = document.getElementById('nb-open-a11y');
-      let a11yLoading = false;
-      function openA11yWidget(){
-        if (a11yLoading) return;
-        const existing = document.getElementById('uw-widget-custom-trigger');
-        if (existing) { existing.click(); return; }
-        a11yLoading = true;
-        const s = document.createElement('script');
-        s.src = 'https://cdn.ux4g.gov.in/accessibility-beta-v1.15/accessibility-widget.js';
-        s.defer = true;
-        s.onload = () => {
-          a11yLoading = false;
-          requestAnimationFrame(() => document.getElementById('uw-widget-custom-trigger')?.click());
-        };
-        s.onerror = () => { a11yLoading = false; };
-        document.body.appendChild(s);
-      }
-      if (a11yFab) a11yFab.addEventListener('click', openA11yWidget);
-
-      if ('IntersectionObserver' in window) {
-        const deferIo = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            const img = entry.target;
-            if (img.dataset.deferSrc) {
-              img.src = img.dataset.deferSrc;
-              img.removeAttribute('data-defer-src');
-            }
-            observer.unobserve(img);
-          });
-        }, { rootMargin: '160px' });
-        document.querySelectorAll('img[data-defer-src]').forEach((img) => deferIo.observe(img));
-      } else {
-        document.querySelectorAll('img[data-defer-src]').forEach((img) => {
-          img.src = img.dataset.deferSrc;
+      if (a11yFab) {
+        a11yFab.addEventListener('click', ()=>{
+          const widgetTrigger = document.getElementById('uw-widget-custom-trigger');
+          if (widgetTrigger) widgetTrigger.click();
         });
       }
     })();
