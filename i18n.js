@@ -57,6 +57,7 @@ window.NB_I18N = {
     'float.atm.full': 'ATM Locator',
     'float.branch.short': 'Branch',
     'float.branch.full': 'Branch Locator',
+    'float.nav': 'Locators',
     'float.atm.aria': 'ATM Locator',
     'float.branch.aria': 'Branch Locator',
 
@@ -266,6 +267,7 @@ window.NB_I18N = {
     'float.atm.full': 'एटीएम लोकेटर',
     'float.branch.short': 'शाखा',
     'float.branch.full': 'शाखा लोकेटर',
+    'float.nav': 'लोकेटर',
     'float.atm.aria': 'एटीएम लोकेटर',
     'float.branch.aria': 'शाखा लोकेटर',
 
