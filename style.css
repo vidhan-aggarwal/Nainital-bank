@@ -31,6 +31,9 @@
   --radius-md: 16px;
   --radius-sm: 12px;
   --container: 1638px;
+  --bs-primary: #173F90;
+  --bs-primary-rgb: 23, 63, 144;
+  --bs-body-font-family: 'Noto Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
   --nb-font-scale: 1;
 }
 
@@ -81,7 +84,7 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Noto Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text-dark);
   line-height: 1.5;
@@ -89,7 +92,7 @@ body {
 }
 
 body[data-nb-lang='hi'] {
-  font-family: 'Noto Sans Devanagari', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-family: 'Noto Sans Devanagari', 'Noto Sans', system-ui, sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -136,45 +139,21 @@ body[data-nb-lang='hi'] {
   top: 0;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 22px;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.2;
-  border-radius: 8px;
-  border: 1.5px solid transparent;
-  cursor: pointer;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
+/* UX4G primary buttons — keep bank palette */
 .btn-primary {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: #fff;
+  --bs-btn-bg: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--secondary);
+  --bs-btn-hover-border-color: var(--secondary);
+  --bs-btn-active-bg: var(--secondary);
+  --bs-btn-active-border-color: var(--secondary);
 }
 
 .btn-outline-primary {
-  background: transparent;
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-@media (hover: hover) {
-  .btn-primary:hover {
-    background: var(--secondary);
-    border-color: var(--secondary);
-    opacity: 1;
-  }
-  .btn-outline-primary:hover {
-    background: var(--primary);
-    color: #fff;
-    opacity: 1;
-  }
+  --bs-btn-color: var(--primary);
+  --bs-btn-border-color: var(--primary);
+  --bs-btn-hover-bg: var(--primary);
+  --bs-btn-hover-border-color: var(--primary);
 }
 
 a {
@@ -464,6 +443,11 @@ main .container,
   gap: 10px;
 }
 
+/* Hide UX4G default floating trigger; we use .nb-a11y-fab instead */
+#uw-widget-custom-trigger.uw-widget-custom-trigger {
+  display: none !important;
+}
+
 .nb-a11y-fab {
   width: 44px;
   height: 44px;
@@ -647,19 +631,6 @@ main .container,
   border-radius: 8px;
 }
 
-/* Below-fold rendering */
-.announcement-bar,
-.business-section,
-.stats-section,
-.interest-section,
-.why-choose-section,
-.announcements-section,
-.mobile-app-section,
-.site-footer {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 500px;
-}
-
 /* Hero Section */
 .hero-section {
   padding: 24px 0 0;
@@ -717,6 +688,7 @@ main .container,
   background-color: #f3f4f6;
   border-radius: var(--radius-lg);
   opacity: 0;
+  will-change: opacity;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -750,7 +722,7 @@ main .container,
 }
 
 .hero-script {
-  font-family: ui-rounded, system-ui, cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 42px;
   color: var(--gold-light);
   line-height: 1;
@@ -1255,7 +1227,6 @@ main .container,
   display: flex;
   flex-direction: column;
   gap: 8px;
-  pointer-events: auto;
 }
 
 .float-btn {
@@ -1409,18 +1380,10 @@ main .container,
   background: #eef4fb;
 }
 
-.card-image {
-  background: #eef4fb;
-}
-
 .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.card-image img:not([src]) {
-  min-height: 140px;
 }
 
 .card-label {
@@ -1477,7 +1440,7 @@ main .container,
 .stats-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0f2b67 0%, #173f90 55%, #1a5cb8 100%);
+  background: url('images/stats-bg.png') center/cover no-repeat;
 }
 
 .stats-bg::after {
