@@ -57,7 +57,6 @@ window.NB_I18N = {
     'float.atm.full': 'ATM Locator',
     'float.branch.short': 'Branch',
     'float.branch.full': 'Branch Locator',
-    'float.nav': 'Locators',
     'float.atm.aria': 'ATM Locator',
     'float.branch.aria': 'Branch Locator',
 
@@ -267,7 +266,6 @@ window.NB_I18N = {
     'float.atm.full': 'एटीएम लोकेटर',
     'float.branch.short': 'शाखा',
     'float.branch.full': 'शाखा लोकेटर',
-    'float.nav': 'लोकेटर',
     'float.atm.aria': 'एटीएम लोकेटर',
     'float.branch.aria': 'शाखा लोकेटर',
 
@@ -424,23 +422,11 @@ window.NB_I18N = {
   }
 };
 
-function nbLoadHiFont() {
-  if (document.getElementById('nb-hi-font')) return;
-  const link = document.createElement('link');
-  link.id = 'nb-hi-font';
-  link.rel = 'stylesheet';
-  link.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap';
-  link.media = 'print';
-  link.onload = function () { link.media = 'all'; };
-  document.head.appendChild(link);
-}
-
 window.NB_I18N.apply = function (code) {
   const dict = window.NB_I18N[code] || window.NB_I18N.en;
   document.documentElement.lang = code === 'hi' ? 'hi' : 'en';
   document.body.setAttribute('data-nb-lang', code);
   localStorage.setItem('nainital-lang', code);
-  if (code === 'hi') nbLoadHiFont();
 
   document.querySelectorAll('[data-nb-i18n]').forEach((el) => {
     const key = el.getAttribute('data-nb-i18n');
