@@ -7,12 +7,14 @@
   <title>Nainital Bank - A Legacy of Trust</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <link rel="preload" as="image" href="images/logo.png" type="image/png">
-  <link rel="preload" as="image" href="images/banner-image-1020.jpg" type="image/jpeg">
-  <link href="https://cdn.ux4g.gov.in/UX4G@2.0.8/css/ux4g-min.css" rel="stylesheet">
+  <link rel="dns-prefetch" href="https://cdn.ux4g.gov.in">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" as="image" href="images/banner-image-600.jpg" type="image/jpeg" fetchpriority="high" imagesrcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w" imagesizes="(max-width: 600px) 100vw, 1020px">
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"></noscript>
 </head>
 <body>
   <a href="#main-content" class="skip-link" data-nb-i18n="skip.main">Skip to main content</a>
@@ -62,7 +64,7 @@
     <div class="header-main">
       <div class="container header-main-inner">
         <a href="#" class="logo-block">
-          <img src="images/logo.png" alt="Nainital Bank" data-nb-i18n-alt="logo.alt" class="logo-img">
+          <img src="images/logo.png" alt="Nainital Bank" data-nb-i18n-alt="logo.alt" class="logo-img" width="56" height="56" decoding="async">
           <div class="logo-text">
             <h1 class="logo-title" id="site-title">Nainital Bank</h1>
             <p class="logo-subtitle" data-nb-i18n="logo.subtitle">Estb 1922 | A Legacy of Trust</p>
@@ -107,50 +109,49 @@
               <div class="hero-carousel">
                 <div class="hero-slides">
                   <img
-                    src="images/banner-image-1020.jpg"
+                    src="images/banner-image-600.jpg"
                     srcset="images/banner-image-600.jpg 600w, images/banner-image-1020.jpg 1020w"
                     sizes="(max-width: 600px) 100vw, 1020px"
+                    width="1020"
+                    height="380"
                     alt="Suhana Safar - Family with car"
                     data-nb-i18n-alt="alt.hero1"
-                    class="hero-slide"
-                    loading="eager"
+                    class="hero-slide active"
+                    fetchpriority="high"
                     decoding="async"
                   >
-                  <img src="images/hero2.png" alt="Hero 2" data-nb-i18n-alt="alt.hero2" class="hero-slide" loading="lazy" decoding="async">
+                  <img alt="Hero 2" data-nb-i18n-alt="alt.hero2" data-nb-src="images/hero2.png" class="hero-slide" width="1020" height="380" decoding="async">
                   <img
-                    src="images/hero3-1280.jpg"
-                    srcset="images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w, images/hero3.png 2048w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                    data-nb-src="images/hero3-1280.jpg"
+                    data-nb-srcset="images/hero3-640.jpg 640w, images/hero3-1280.jpg 1280w"
+                    data-nb-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     width="1020"
                     height="380"
                     alt="Hero 3"
                     data-nb-i18n-alt="alt.hero3"
                     class="hero-slide"
-                    loading="lazy"
                     decoding="async"
                   >
                   <img
                     width="1020"
                     height="380"
-                    src="images/hero4-1280.jpg"
-                    srcset="images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w, images/hero4.png 2048w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                    data-nb-src="images/hero4-1280.jpg"
+                    data-nb-srcset="images/hero4-640.jpg 640w, images/hero4-1280.jpg 1280w"
+                    data-nb-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     alt="Hero 4"
                     data-nb-i18n-alt="alt.hero4"
                     class="hero-slide"
-                    loading="lazy"
                     decoding="async"
                   >
                   <img
-                    src="images/hero5-1280.jpg"
-                    srcset="images/hero5-640.jpg 640w, images/hero5-1280.jpg 1280w, images/hero5.png 4160w"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
+                    data-nb-src="images/hero5-1280.jpg"
+                    data-nb-srcset="images/hero5-640.jpg 640w, images/hero5-1280.jpg 1280w"
+                    data-nb-sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1280px"
                     width="1020"
                     height="380"
                     alt="Hero 5"
                     data-nb-i18n-alt="alt.hero5"
                     class="hero-slide"
-                    loading="lazy"
                     decoding="async"
                   >
                 </div>
@@ -231,7 +232,7 @@
                         <a href="#" data-nb-i18n="widget.offer.details">DETAILS</a>
                       </div>
                     </div>
-                    <img src="images/creditcard.png" alt="Credit cards" data-nb-i18n-alt="alt.creditcards" class="offer-cards-img" loading="lazy" decoding="async">
+                    <img src="images/creditcard.png" alt="Credit cards" data-nb-i18n-alt="alt.creditcards" class="offer-cards-img" width="500" height="339" loading="lazy" decoding="async">
                   </div>
                 </div>
                 <div class="widget-search">
@@ -332,7 +333,7 @@
           <div class="business-cards">
             <article class="business-card">
                 <div class="card-image">
-                <img src="images/investmentcoin.png" alt="Investment" data-nb-i18n-alt="alt.card.investment" loading="lazy" decoding="async">
+                <img src="images/investmentcoin.png" alt="Investment" data-nb-i18n-alt="alt.card.investment" width="400" height="301" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.investment">Investment</h3>
               <div class="card-body">
@@ -342,7 +343,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/investmentblock.png" alt="MSME Investment" data-nb-i18n-alt="alt.card.msme" loading="lazy" decoding="async">
+                <img src="images/investmentblock.png" alt="MSME Investment" data-nb-i18n-alt="alt.card.msme" width="400" height="301" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.investment">Investment</h3>
               <div class="card-body">
@@ -352,7 +353,7 @@
             </article>
             <article class="business-card business-card-active">
               <div class="card-image">
-                <img src="images/savingaccount.png" alt="Savings Accounts" data-nb-i18n-alt="alt.card.savings" loading="lazy" decoding="async">
+                <img src="images/savingaccount.png" alt="Savings Accounts" data-nb-i18n-alt="alt.card.savings" width="400" height="301" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.savings">Savings Accounts</h3>
               <div class="card-body">
@@ -362,7 +363,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/fixeddeposit.png" alt="Fixed Deposits" data-nb-i18n-alt="alt.card.fd" loading="lazy" decoding="async">
+                <img src="images/fixeddeposit.png" alt="Fixed Deposits" data-nb-i18n-alt="alt.card.fd" width="400" height="301" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.fd">Fixed Deposits</h3>
               <div class="card-body">
@@ -372,7 +373,7 @@
             </article>
             <article class="business-card">
               <div class="card-image">
-                <img src="images/homeloan.png" alt="Home Loans" data-nb-i18n-alt="alt.card.home" loading="lazy" decoding="async">
+                <img src="images/homeloan.png" alt="Home Loans" data-nb-i18n-alt="alt.card.home" width="400" height="301" loading="lazy" decoding="async">
               </div>
               <h3 class="card-label" data-nb-i18n="card.home">Home Loans</h3>
               <div class="card-body">
@@ -420,10 +421,10 @@
       <div class="container">
         <h2 class="section-title" data-nb-i18n="interest.title">Interest Rates</h2>
         <div class="interest-icons">
-          <img src="images/homeloaner.png" alt="Home Loan" data-nb-i18n-alt="alt.loan.home" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/carloan.png" alt="Car Loan" data-nb-i18n-alt="alt.loan.car" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/goldloan.png" alt="Gold Loan" data-nb-i18n-alt="alt.loan.gold" class="loan-icon" loading="lazy" decoding="async">
-          <img src="images/eduloan.png" alt="Education Loan" data-nb-i18n-alt="alt.loan.edu" class="loan-icon" loading="lazy" decoding="async">
+          <img src="images/homeloaner.png" alt="Home Loan" data-nb-i18n-alt="alt.loan.home" class="loan-icon" width="280" height="267" loading="lazy" decoding="async">
+          <img src="images/carloan.png" alt="Car Loan" data-nb-i18n-alt="alt.loan.car" class="loan-icon" width="280" height="267" loading="lazy" decoding="async">
+          <img src="images/goldloan.png" alt="Gold Loan" data-nb-i18n-alt="alt.loan.gold" class="loan-icon" width="280" height="267" loading="lazy" decoding="async">
+          <img src="images/eduloan.png" alt="Education Loan" data-nb-i18n-alt="alt.loan.edu" class="loan-icon" width="280" height="267" loading="lazy" decoding="async">
         </div>
         <div class="interest-grid">
           <div class="interest-item">
@@ -548,7 +549,7 @@
     <section class="mobile-app-section">
       <div class="container mobile-app-inner">
         <div class="app-visual">
-          <img src="images/phone.png" alt="Nainital Bank Mobile App" data-nb-i18n-alt="alt.app.phone" class="phone-img" loading="lazy" decoding="async">
+          <img src="images/phone.png" alt="Nainital Bank Mobile App" data-nb-i18n-alt="alt.app.phone" class="phone-img" width="390" height="600" loading="lazy" decoding="async">
           <div class="app-badges-side">
             <div class="qr-code">
               <img src="images/qrcode.png" alt="QR Code" data-nb-i18n-alt="alt.app.qr" loading="lazy" decoding="async">
@@ -684,7 +685,7 @@
   </aside>
 
   <div class="fixed-action-stack" data-nb-i18n-aria="fixed.tools" aria-label="Page tools">
-    <button type="button" class="nb-a11y-fab" id="nb-open-a11y" data-nb-i18n-aria="a11y.open" aria-label="Open accessibility options">
+    <button type="button" class="nb-a11y-fab" id="nb-open-a11y" data-nb-i18n-aria="a11y.open" aria-label="Open accessibility options" aria-expanded="false" aria-controls="uw-main">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5"/></svg>
     </button>
     <a href="#site-title" class="back-to-top" data-nb-i18n-aria="a11y.backtop" aria-label="Back to top">
@@ -692,216 +693,7 @@
     </a>
   </div>
 
-  <script src="i18n.js"></script>
-  <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g.min.js" defer></script>
-  <script src="https://cdn.ux4g.gov.in/accessibility-beta-v1.15/accessibility-widget.js" defer></script>
-  <script>
-    (function(){
-      const carouselEl = document.querySelector('.hero-carousel');
-      const slides = Array.from(document.querySelectorAll('.hero-slide'));
-      const dots = Array.from(document.querySelectorAll('.carousel-dots .dot'));
-      const prevBtn = document.querySelector('.carousel-prev');
-      const nextBtn = document.querySelector('.carousel-next');
-      let current = 0;
-      if (!slides.length) {
-        // Carousel optional — skip slide logic only
-      } else {
-      const intervalMs = 4000;
-      let timer = null;
-
-      function show(index){
-        index = (index + slides.length) % slides.length;
-        slides.forEach((s,i)=> s.classList.toggle('active', i===index));
-        dots.forEach((d,i)=>{
-          const on = i === index;
-          d.classList.toggle('active', on);
-          d.setAttribute('aria-selected', on ? 'true' : 'false');
-        });
-        current = index;
-      }
-
-      function next(){ show(current+1); }
-      function prev(){ show(current-1); }
-
-      function start(){ stop(); timer = setInterval(next, intervalMs); }
-      function stop(){ if (timer) { clearInterval(timer); timer = null; } }
-      function reset(){
-        if (!prefersReducedMotion) start();
-      }
-
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      prevBtn && prevBtn.addEventListener('click', ()=>{ prev(); reset(); });
-      nextBtn && nextBtn.addEventListener('click', ()=>{ next(); reset(); });
-      dots.forEach((d, i)=> d.addEventListener('click', ()=>{ show(i); reset(); }));
-
-      // pause on hover (desktop)
-      if (carouselEl) {
-        carouselEl.addEventListener('mouseenter', stop);
-        carouselEl.addEventListener('mouseleave', () => {
-          if (!prefersReducedMotion) start();
-        });
-      }
-
-      // basic touch swipe support
-      let touchStartX = 0;
-      let touchEndX = 0;
-      const touchThreshold = 40;
-      carouselEl && carouselEl.addEventListener('touchstart', (e)=>{ touchStartX = e.changedTouches[0].screenX; stop(); });
-      carouselEl && carouselEl.addEventListener('touchend', (e)=>{ touchEndX = e.changedTouches[0].screenX; const dx = touchEndX - touchStartX; if (Math.abs(dx) > touchThreshold) { dx < 0 ? next() : prev(); } reset(); });
-
-      // Initialize autoplay (UX4G: respect prefers-reduced-motion)
-      show(0);
-      if (!prefersReducedMotion) start();
-      }
-
-      // Animated counters for stats
-      const counters = Array.from(document.querySelectorAll('.stats-number[data-target]'));
-      function animateCounter(el, target, duration=4500){
-        const start = performance.now();
-        function easeOutQuart(t){ return 1 - Math.pow(1 - t, 4); }
-        function tick(now){
-          const elapsed = now - start;
-          const raw = Math.min(elapsed / duration, 1);
-          const progress = easeOutQuart(raw);
-          const value = progress * target;
-          let text = '';
-          if (target >= 1000000){
-            if (raw < 1) text = (value / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
-            else text = (target / 1000000 % 1 === 0 ? (target / 1000000).toFixed(0) : (target / 1000000).toFixed(1)) + 'M+';
-          } else if (target >= 1000){
-            if (raw < 1) text = (value / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
-            else text = Math.round(target).toLocaleString() + '+';
-          } else {
-            if (raw < 1) text = Math.round(value).toLocaleString();
-            else text = target.toLocaleString() + '+';
-          }
-          el.textContent = text;
-          if (raw < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-      }
-
-      if (counters.length){
-        const obs = new IntersectionObserver((entries, observer)=>{
-          entries.forEach(entry=>{
-            if (entry.isIntersecting){
-              counters.forEach(c=> animateCounter(c, Number(c.getAttribute('data-target'))));
-              observer.disconnect();
-            }
-          });
-        }, { threshold: 0.35 });
-        obs.observe(document.querySelector('.stats-section') || document.body);
-      }
-      // Mobile nav toggle
-      (function(){
-        const headerEl = document.querySelector('.site-header');
-        const mobileBtn = document.querySelector('.mobile-menu-btn');
-        const mqCloseWidth = 480;
-        if (!mobileBtn || !headerEl) return;
-        mobileBtn.addEventListener('click', ()=>{
-          const open = headerEl.classList.toggle('nav-open');
-          mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        // Close when viewport is resized larger than mobile breakpoint
-        let resizeTimer = null;
-        window.addEventListener('resize', ()=>{
-          if (resizeTimer) clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(()=>{
-            if (window.innerWidth > mqCloseWidth && headerEl.classList.contains('nav-open')){
-              headerEl.classList.remove('nav-open');
-              mobileBtn.setAttribute('aria-expanded','false');
-            }
-          }, 120);
-        });
-      })();
-
-    })();
-
-    // Header accessibility controls (isolated from carousel / UX4G widget CSS)
-    (function(){
-      const MIN_SCALE = 0.85;
-      const MAX_SCALE = 1.35;
-      const STEP = 0.05;
-      const FONT_SELECTOR = 'main p, main h1, main h2, main h3, main h4, main h5, main h6, main li, main a, main span, main label, main button, .site-header a, .site-header p, .site-header h1, .site-header button, .site-footer p, .site-footer a, .site-footer h3';
-      let fontScale = parseFloat(localStorage.getItem('nainital-font-scale')) || 1;
-      const baseFontSizes = new Map();
-
-      document.querySelectorAll(FONT_SELECTOR).forEach(el => {
-        const px = parseFloat(getComputedStyle(el).fontSize);
-        if (!isNaN(px)) baseFontSizes.set(el, px);
-      });
-
-      function applyFontScale(){
-        document.documentElement.style.setProperty('--nb-font-scale', String(fontScale));
-        localStorage.setItem('nainital-font-scale', String(fontScale));
-        document.querySelectorAll(FONT_SELECTOR).forEach(el => {
-          const base = baseFontSizes.get(el);
-          if (base) el.style.fontSize = (base * fontScale) + 'px';
-        });
-      }
-
-      const dec = document.getElementById('nb-font-decrease');
-      const inc = document.getElementById('nb-font-increase');
-      const resetBtn = document.getElementById('nb-font-reset');
-
-      function stop(e){ e.preventDefault(); e.stopPropagation(); }
-
-      dec && dec.addEventListener('click', (e)=>{
-        stop(e);
-        fontScale = Math.max(MIN_SCALE, +(fontScale - STEP).toFixed(2));
-        applyFontScale();
-      });
-      inc && inc.addEventListener('click', (e)=>{
-        stop(e);
-        fontScale = Math.min(MAX_SCALE, +(fontScale + STEP).toFixed(2));
-        applyFontScale();
-      });
-      resetBtn && resetBtn.addEventListener('click', (e)=>{
-        stop(e);
-        fontScale = 1;
-        applyFontScale();
-      });
-      applyFontScale();
-
-      const themeToggle = document.getElementById('nb-theme-toggle');
-      if (themeToggle) {
-        const storedTheme = localStorage.getItem('nainital-dark-mode') === 'true';
-        themeToggle.checked = storedTheme;
-        const applyTheme = () => {
-          const on = themeToggle.checked;
-          document.body.classList.toggle('nb-dark-mode', on);
-          document.body.classList.toggle('dark-mode', on);
-          localStorage.setItem('nainital-dark-mode', String(on));
-        };
-        themeToggle.addEventListener('change', (e)=>{
-          e.stopPropagation();
-          applyTheme();
-        });
-        themeToggle.addEventListener('click', (e)=> e.stopPropagation());
-        applyTheme();
-      }
-
-      const langSelect = document.getElementById('nb-language');
-      if (langSelect && window.NB_I18N) {
-        const savedLang = localStorage.getItem('nainital-lang') || 'en';
-        langSelect.value = savedLang;
-        NB_I18N.apply(savedLang);
-        langSelect.addEventListener('change', (e)=>{
-          e.stopPropagation();
-          NB_I18N.apply(langSelect.value);
-        });
-        langSelect.addEventListener('click', (e)=> e.stopPropagation());
-      }
-
-      const a11yFab = document.getElementById('nb-open-a11y');
-      if (a11yFab) {
-        a11yFab.addEventListener('click', ()=>{
-          const widgetTrigger = document.getElementById('uw-widget-custom-trigger');
-          if (widgetTrigger) widgetTrigger.click();
-        });
-      }
-    })();
-  </script>
+  <script src="i18n.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
