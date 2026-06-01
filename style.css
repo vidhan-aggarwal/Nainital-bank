@@ -31,9 +31,6 @@
   --radius-md: 16px;
   --radius-sm: 12px;
   --container: 1638px;
-  --bs-primary: #173F90;
-  --bs-primary-rgb: 23, 63, 144;
-  --bs-body-font-family: 'Noto Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
   --nb-font-scale: 1;
 }
 
@@ -84,7 +81,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans', 'Noto Sans Devanagari', system-ui, sans-serif;
+  font-family: system-ui, -apple-system, 'Segoe UI', 'Noto Sans', 'Noto Sans Devanagari', sans-serif;
   background: var(--bg);
   color: var(--text-dark);
   line-height: 1.5;
@@ -139,21 +136,68 @@ body[data-nb-lang='hi'] {
   top: 0;
 }
 
-/* UX4G primary buttons — keep bank palette */
+/* Buttons (replaces UX4G Bootstrap bundle — ~270KB saved) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 8px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
 .btn-primary {
-  --bs-btn-bg: var(--primary);
-  --bs-btn-border-color: var(--primary);
-  --bs-btn-hover-bg: var(--secondary);
-  --bs-btn-hover-border-color: var(--secondary);
-  --bs-btn-active-bg: var(--secondary);
-  --bs-btn-active-border-color: var(--secondary);
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+@media (hover: hover) {
+  .btn-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    opacity: 1;
+  }
 }
 
 .btn-outline-primary {
-  --bs-btn-color: var(--primary);
-  --bs-btn-border-color: var(--primary);
-  --bs-btn-hover-bg: var(--primary);
-  --bs-btn-hover-border-color: var(--primary);
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+@media (hover: hover) {
+  .btn-outline-primary:hover {
+    background: var(--primary);
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .d-md-inline {
+    display: inline !important;
+  }
+}
+
+.nb-lang-select,
+.form-select {
+  appearance: auto;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.2;
 }
 
 a {
@@ -193,7 +237,14 @@ input {
   padding: 12px 8px 8px;
 }
 
-/* Hover effects - use will-change sparingly for mobile performance */
+/* Below-fold sections: faster initial paint */
+.hero-section ~ section,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* Hover effects */
 .business-card,
 .announcement-card,
 .stats-card,
@@ -445,7 +496,22 @@ main .container,
 
 /* Hide UX4G default floating trigger; we use .nb-a11y-fab instead */
 #uw-widget-custom-trigger.uw-widget-custom-trigger {
-  display: none !important;
+  position: fixed !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Keep widget panel above page chrome */
+#uw-main {
+  z-index: 100002 !important;
 }
 
 .nb-a11y-fab {
@@ -460,6 +526,12 @@ main .container,
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(15, 43, 103, 0.35);
+}
+
+.nb-a11y-fab.nb-a11y-fab-active {
+  background: var(--primary);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 @media (hover: hover) {
@@ -688,7 +760,6 @@ main .container,
   background-color: #f3f4f6;
   border-radius: var(--radius-lg);
   opacity: 0;
-  will-change: opacity;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -1440,7 +1511,14 @@ main .container,
 .stats-bg {
   position: absolute;
   inset: 0;
-  background: url('images/stats-bg.png') center/cover no-repeat;
+  background: linear-gradient(135deg, #0f2b67 0%, #173f90 100%);
+}
+
+.stats-section.stats-bg-loaded .stats-bg {
+  background-image: url('images/stats-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .stats-bg::after {
@@ -1459,15 +1537,21 @@ main .container,
 }
 
 .stats-card {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-lg);
   padding: 32px 48px;
   text-align: center;
   min-width: 220px;
   contain: content;
+}
+
+@media (min-width: 769px) {
+  .stats-card {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.12);
+  }
 }
 
 @media (hover: hover) {
