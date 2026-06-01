@@ -461,3 +461,15 @@ window.NB_I18N.apply = function (code) {
   const skip = document.querySelector('.skip-link');
   if (skip && dict['skip.main']) skip.textContent = dict['skip.main'];
 };
+
+(function () {
+  function bootLang() {
+    const saved = localStorage.getItem('nainital-lang');
+    if (saved && saved !== 'en') window.NB_I18N.apply(saved);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootLang);
+  } else {
+    bootLang();
+  }
+})();
