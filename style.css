@@ -1,0 +1,2 @@
+/* Legacy path — styles live in css/. Update HTML to link css/base.css directly. */
+@import url("css/base.css");
