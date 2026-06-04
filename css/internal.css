@@ -1,0 +1,411 @@
+/* ==========================================================================
+   Nainital Bank — internal.css
+   Legacy single-page internal layouts (not used by deposits hub)
+   ========================================================================== */
+
+/* Internal content pages (reference: Small_Account.aspx layout) */
+.internal-page-shell {
+  padding: 0 0 48px;
+  background: var(--bg);
+}
+
+.internal-page-layout {
+  display: grid;
+  grid-template-columns: 268px minmax(0, 1fr);
+  gap: 0;
+  align-items: start;
+}
+
+.internal-left-nav {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  max-height: 100vh;
+  overflow-y: auto;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  padding: 0 0 16px;
+  box-shadow: 4px 0 24px rgba(23, 63, 144, 0.12);
+}
+
+.internal-left-nav-brand {
+  margin: 0;
+  padding: 16px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.internal-nav-group {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.internal-nav-group summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  user-select: none;
+}
+
+.internal-nav-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.internal-nav-group summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.internal-nav-group[open] summary::after {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.internal-nav-group summary:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.internal-nav-sublist {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 8px;
+}
+
+.internal-nav-sublist a {
+  display: block;
+  padding: 9px 18px 9px 28px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.internal-nav-sublist a:hover {
+  background: rgba(28, 196, 255, 0.12);
+  color: #fff;
+}
+
+.internal-nav-sublist a.is-active {
+  background: rgba(28, 196, 255, 0.2);
+  border-left-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.internal-main-column {
+  min-width: 0;
+}
+
+.internal-banner {
+  position: relative;
+  min-height: 200px;
+  background: var(--secondary) center / cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.internal-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 43, 103, 0.88) 0%, rgba(23, 63, 144, 0.45) 55%, rgba(23, 63, 144, 0.2) 100%);
+}
+
+.internal-banner-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 28px 32px 32px;
+  color: #fff;
+}
+
+.internal-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.internal-breadcrumb a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+}
+
+.internal-breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.internal-breadcrumb [aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.internal-breadcrumb-sep {
+  opacity: 0.65;
+}
+
+.internal-banner-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.internal-product-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  background: var(--white);
+  border-bottom: 1px solid rgba(23, 63, 144, 0.12);
+  box-shadow: 0 2px 8px rgba(23, 63, 144, 0.06);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.internal-product-tabs a {
+  flex: 0 0 auto;
+  padding: 14px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.internal-product-tabs a:hover {
+  color: var(--primary);
+  background: rgba(23, 63, 144, 0.04);
+}
+
+.internal-product-tabs a.is-active {
+  color: var(--primary);
+  border-bottom-color: var(--accent);
+  background: rgba(28, 196, 255, 0.08);
+}
+
+.internal-content-body {
+  padding: 28px 32px 0;
+}
+
+.internal-content-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(28, 196, 255, 0.3);
+}
+
+.internal-intro-split {
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) 1fr;
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.internal-intro-media {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--white);
+}
+
+.internal-intro-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.internal-intro-copy h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 12px;
+}
+
+.internal-intro-copy p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.internal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.internal-info-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 24px 28px;
+  height: 100%;
+}
+
+.internal-info-card--full {
+  grid-column: 1 / -1;
+}
+
+.internal-info-card h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(28, 196, 255, 0.25);
+}
+
+.internal-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.internal-check-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-dark);
+}
+
+.internal-check-list li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 10px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.internal-info-card--limits .internal-check-list li::before {
+  color: var(--gold);
+}
+
+.internal-cta-bar {
+  margin: 32px 0 0;
+  padding: 24px 28px;
+  background: linear-gradient(90deg, rgba(23, 63, 144, 0.08), rgba(28, 196, 255, 0.08));
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.internal-cta-bar p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.internal-quick-widgets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(23, 63, 144, 0.1);
+}
+
+.internal-widget-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.internal-widget-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.internal-widget-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+.internal-widget-card span {
+  display: block;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+body.dark-mode .internal-product-tabs,
+body.dark-mode .internal-intro-media,
+body.dark-mode .internal-info-card,
+body.dark-mode .internal-widget-card {
+  background: var(--white);
+}
+
+@media (max-width: 1100px) {
+  .internal-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .internal-left-nav {
+    position: static;
+    max-height: none;
+  }
+
+  .internal-intro-split {
+    grid-template-columns: 1fr;
+  }
+
+  .internal-quick-widgets {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .internal-content-body {
+    padding: 20px 16px 0;
+  }
+
+  .internal-banner-inner {
+    padding: 20px 16px 24px;
+  }
+
+  .internal-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
